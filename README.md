@@ -1,15 +1,16 @@
 # Hacienda
 
-Browser game prototype built with Phaser, TypeScript, and Vite.
+Browser game prototypes built with Phaser, TypeScript, and Vite.
 
 ## Development
 
 ```sh
 npm install
-npm run dev
+npm run dev:game1
 ```
 
-The editable game source lives in `game/`.
+The first game source lives in `apps/arma-el-presupuesto-de-el-salvador/`.
+Design references live under `design/`.
 
 ## GitHub Pages
 
@@ -17,6 +18,10 @@ The editable game source lives in `game/`.
 npm run build
 ```
 
-The build writes the static Pages entry point to `index.html` and generated
-assets to `assets/`, so GitHub Pages can serve the game from the `main` branch
-root without requiring GitHub Actions.
+The root page links to game-specific subpaths. The Game 1 build writes static
+files to `arma-el-presupuesto-de-el-salvador/`, so GitHub Pages can serve it
+from:
+
+```txt
+https://vrx.group/hacienda/arma-el-presupuesto-de-el-salvador/
+```

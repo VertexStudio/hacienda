@@ -4,8 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc --noEmit && vite build && node scripts/publish-pages.mjs",
+    "dev": "npm run dev:game1",
+    "dev:game1": "vite",
+    "build": "npm run build:game1",
+    "build:game1": "tsc --noEmit && vite build && node scripts/publish-pages.mjs arma-el-presupuesto-de-el-salvador",
     "preview": "vite preview"
   },
   "dependencies": {

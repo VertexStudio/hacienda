@@ -12,5 +12,5 @@
     "noEmit": true,
     "strict": true
   },
-  "include": ["game/src"]
+  "include": ["apps/arma-el-presupuesto-de-el-salvador/src"]
 }
