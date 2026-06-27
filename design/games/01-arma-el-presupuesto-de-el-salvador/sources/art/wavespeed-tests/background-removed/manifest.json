@@ -1,0 +1,26 @@
+{
+  "endpoint": "https://api.wavespeed.ai/api/v3/wavespeed-ai/image-background-remover",
+  "jobs": [
+    {
+      "source": "https://media.githubusercontent.com/media/VertexStudio/hacienda/main/design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-tests/icon_sector_education_2x.test.png",
+      "filename": "icon_sector_education_2x.rembg.test.png",
+      "prediction_id": "11ad65da1bcb4784881a21b59b1997e1",
+      "output_url": "https://d2p7pge43lyniu.cloudfront.net/output/13727f18-64c1-4760-bb7d-7b7c5c9d53f2-u2_57bdf556-bf0a-4fd1-9a9d-13d94bd486ff.png",
+      "local_path": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-tests/background-removed/icon_sector_education_2x.rembg.test.png"
+    },
+    {
+      "source": "https://media.githubusercontent.com/media/VertexStudio/hacienda/main/design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-tests/prop_coin_cash_stack_2x.test.png",
+      "filename": "prop_coin_cash_stack_2x.rembg.test.png",
+      "prediction_id": "206e629bc7a84774bea7fba162bd9d52",
+      "output_url": "https://d2p7pge43lyniu.cloudfront.net/output/58608719-d589-4063-a14d-8333bb28d47a-u1_c0218d7d-180c-4e2e-a5c4-b7c6b25ebda3.png",
+      "local_path": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-tests/background-removed/prop_coin_cash_stack_2x.rembg.test.png"
+    },
+    {
+      "source": "https://media.githubusercontent.com/media/VertexStudio/hacienda/main/design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-tests/character_guide_neutral_2x.test.png",
+      "filename": "character_guide_neutral_2x.rembg.test.png",
+      "prediction_id": "e8230c67f85f480592005da71d1484f4",
+      "output_url": "https://d2p7pge43lyniu.cloudfront.net/output/5c23ae45-c0df-4cd6-9306-9f34d66bb517-u1_f2752827-8917-423b-b9f1-782863d32636.png",
+      "local_path": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-tests/background-removed/character_guide_neutral_2x.rembg.test.png"
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 # Wavespeed Image Generation Notes
 
 Model page: https://wavespeed.ai/models/openai/gpt-image-2/edit
+Background remover: https://wavespeed.ai/models/wavespeed-ai/image-background-remover
 
 This repo uses Wavespeed for reference-guided image generation experiments. The local API key is expected in `.env` as `WAVESPEED_API_KEY`.
 
@@ -19,7 +20,7 @@ Alternatively, parse `.env` inside the script. Do not add a tracked dependency j
 
 ## Model Endpoint
 
-Use:
+For reference-guided generation, use:
 
 ```text
 POST https://api.wavespeed.ai/api/v3/openai/gpt-image-2/edit
@@ -41,6 +42,51 @@ https://media.githubusercontent.com/media/VertexStudio/hacienda/main/design/game
 ```
 
 Observed issue: the GitHub Pages URL for the same LFS image returned only a 132-byte LFS pointer, not the actual 1.7 MB image. Do not use the Pages URL for Wavespeed reference images unless you verify byte size first.
+
+For AI background removal, use:
+
+```text
+POST https://api.wavespeed.ai/api/v3/wavespeed-ai/image-background-remover
+```
+
+Request body:
+
+```json
+{
+  "image": "https://media.githubusercontent.com/media/VertexStudio/hacienda/main/path/to/source.png",
+  "enable_sync_mode": false,
+  "enable_base64_output": false
+}
+```
+
+This endpoint also uses the async `data.urls.get` polling pattern.
+
+## Tool Boundary
+
+Use AI models for:
+
+- Generating new artwork.
+- Reference-guided style transfer or semantic edits.
+- Background removal / segmentation.
+- Meaningful visual changes that require interpretation.
+
+Use local tools only for deterministic post-processing:
+
+- Crop.
+- Resize / scale.
+- Pad canvas.
+- Convert file formats.
+- Compress.
+- Check dimensions, alpha channels, and metadata.
+
+Available local tools in this workspace:
+
+- ImageMagick: `magick`, `convert`
+- Video/image utility: `ffmpeg`
+- macOS image utility: `sips`
+- Python package runner: `uv`
+
+Do not use local tools as a substitute for AI tasks such as object generation, segmentation decisions, or style conversion. Use them after the model output exists and the operation is mechanical.
 
 ## Recommended Request Shape
 
@@ -84,6 +130,10 @@ Generated files:
 - `prop_coin_cash_stack_2x.test.png`
 - `character_guide_neutral_2x.test.png`
 - `manifest.json`
+- `background-removed/icon_sector_education_2x.rembg.test.png`
+- `background-removed/prop_coin_cash_stack_2x.rembg.test.png`
+- `background-removed/character_guide_neutral_2x.rembg.test.png`
+- `background-removed/manifest.json`
 
 These are proof-of-life assets, not final production art.
 
@@ -94,6 +144,10 @@ These are proof-of-life assets, not final production art.
 - The reference image influenced the general polished educational-game look.
 - The education icon and guide avatar are visually close enough to prove the workflow can produce useful style-directed candidates.
 - Generated PNG files are covered by the repo's Git LFS rules.
+- The Wavespeed background remover completed successfully on all three generated test images.
+- Background remover outputs are RGBA PNGs with real transparent pixels:
+  - `alpha-min=0`
+  - `alpha-max=1`
 
 ## What Did Not Work Or Needs Care
 
@@ -106,8 +160,9 @@ These are proof-of-life assets, not final production art.
 - Transparent background prompting was not reliable:
   - The education icon and guide avatar were RGB PNGs with light/white backgrounds.
   - The coin/cash prop was RGBA, but still had a visible rendered background.
-  - Production pipeline needs a background-removal/post-processing step or stricter prompt testing.
+  - Production pipeline should treat background removal as a separate AI step instead of relying on the generation prompt.
 - The coin/cash prop came out more 3D/rendered than the reference board and included currency-like symbols on coins. For final prompts, explicitly request `semi-flat vector-like illustration`, `no letters`, `no currency symbols`, and `transparent background`.
+- Background remover fixes the alpha channel but does not resize, crop, or restyle the image. Use local tools only after removal for deterministic canvas fitting.
 
 ## Prompt Guidance
 
@@ -150,4 +205,26 @@ async function pollWavespeed(getUrl, apiKey) {
   }
   throw new Error(`Wavespeed task did not complete: ${getUrl}`);
 }
+```
+
+## Deterministic Post-Processing Examples
+
+Use these only after AI generation/removal has produced an acceptable image.
+
+Check dimensions and alpha:
+
+```sh
+magick identify -format '%f %[channels] alpha-min=%[fx:minima.a] alpha-max=%[fx:maxima.a] size=%wx%h\n' path/to/image.png
+```
+
+Resize to an art-inventory target:
+
+```sh
+magick input.png -resize 128x128 -background none -gravity center -extent 128x128 output.png
+```
+
+Crop transparent padding:
+
+```sh
+magick input.png -trim +repage output.png
 ```
