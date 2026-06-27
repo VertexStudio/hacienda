@@ -426,17 +426,17 @@ class BudgetSimulatorScene extends Phaser.Scene {
 
     this.drawComparisonChart(48, 168);
     this.drawComparisonTable(724, 126);
-    this.drawAnalysis(48, 612);
+    this.drawAnalysis(48, 608);
     this.add.image(1070, 80, "trophy").setDisplaySize(68, 68);
 
-    this.addButton(48, 744, 240, 52, "Intentar nuevamente", () => {
+    this.addButton(48, 716, 240, 52, "Intentar nuevamente", () => {
       this.resetAllocations();
       this.renderIntro();
     }, "secondary", "uiRestart");
-    this.addButton(314, 744, 350, 52, "Ir a la guía ciudadana 2025", () => {
+    this.addButton(314, 716, 350, 52, "Ir a la guía ciudadana 2025", () => {
       window.open(GUIDE_URL, "_blank", "noopener,noreferrer");
     }, "primary", "uiChevronRight");
-    this.addButton(690, 744, 190, 52, "Finalizar", () => this.renderIntro(), "plain");
+    this.addButton(690, 716, 190, 52, "Finalizar", () => this.renderIntro(), "plain");
   }
 
   private drawComparisonChart(x: number, y: number) {
@@ -503,7 +503,7 @@ class BudgetSimulatorScene extends Phaser.Scene {
       .filter((sector) => this.allocations[sector.id] < sector.realPercent)
       .map((sector) => sector.name);
 
-    this.addPanel(x, y, 1084, 112, COLORS.panel, COLORS.line, 0.96, 8);
+    this.addPanel(x, y, 1084, 98, COLORS.panel, COLORS.line, 0.96, 8);
 
     const surplusMessage =
       surplus > 0
@@ -516,7 +516,7 @@ class BudgetSimulatorScene extends Phaser.Scene {
     const underSummary = under.length ? `${under.length} sectores. Revisa la tabla para ver cuáles.` : "ningún sector.";
     this.addText(x + 560, y + 18, `Más que el presupuesto real: ${overSummary}`, 14, TEXT.muted, 330);
     this.addText(x + 560, y + 62, `Menos que el presupuesto real: ${underSummary}`, 14, TEXT.muted, 330);
-    this.add.image(x + 994, y + 58, "sceneResultsSuccess").setDisplaySize(126, 108);
+    this.add.image(x + 1004, y + 50, "sceneResultsSuccess").setDisplaySize(102, 88);
   }
 
   private drawIndicators(x: number, y: number) {
@@ -549,7 +549,7 @@ class BudgetSimulatorScene extends Phaser.Scene {
 
   private drawBackground() {
     this.add.image(WIDTH / 2, HEIGHT / 2, "bgGameShell").setDisplaySize(WIDTH, HEIGHT);
-    this.add.rectangle(0, 0, WIDTH, HEIGHT, 0xf7fafc, 0.36).setOrigin(0);
+    this.add.rectangle(0, 0, WIDTH, HEIGHT, 0xf7fafc, 0.22).setOrigin(0);
     this.add.image(976, 72, "bgSkylineOverlay").setDisplaySize(520, 80).setAlpha(0.52);
     this.add.image(494, 58, "cloudLarge").setDisplaySize(188, 94).setAlpha(0.62);
     this.add.image(124, 76, "cloudMedium").setDisplaySize(156, 78).setAlpha(0.82);
@@ -557,7 +557,7 @@ class BudgetSimulatorScene extends Phaser.Scene {
     this.add.image(900, 760, "mountainCity").setDisplaySize(390, 118).setAlpha(0.26);
     this.add.image(120, 754, "bushFlowers").setDisplaySize(210, 105).setAlpha(0.34);
     this.add.image(1102, 752, "tree").setDisplaySize(116, 116).setAlpha(0.36);
-    this.addPanel(34, 24, WIDTH - 68, HEIGHT - 48, COLORS.panel, COLORS.line, 0.82, 8, false);
+    this.addPanel(34, 24, WIDTH - 68, HEIGHT - 48, COLORS.panel, COLORS.line, 0.74, 8, false);
   }
 
   private drawInfoPanel(x: number, y: number, width: number, height: number, title: string, lines: string[]) {
