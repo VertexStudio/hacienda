@@ -164,7 +164,7 @@ const ASSETS = [
     resize: "220x160",
     kind: "prop",
     prompt:
-      `${BASE_STYLE} Small respectful simplified El Salvador flag on a short pole, blue-white-blue horizontal bands, no coat of arms details, no lettering, gently waving. ${ALPHA_STYLE} ${NO_TEXT}`
+      `${BASE_STYLE} Isolated prop only: one small respectful simplified El Salvador flag on a short pole, front-facing and only gently waving so the three horizontal bands are clearly readable: bright blue top band, clean white middle band, bright blue bottom band. The middle white band must be wide and visible. The image must contain only the flag and pole, nothing else: no people, no buildings, no coins, no landscape, no piggy bank, no chart. ${ALPHA_STYLE} No coat of arms details. ${NO_TEXT}`
   },
   {
     id: "PR-04",

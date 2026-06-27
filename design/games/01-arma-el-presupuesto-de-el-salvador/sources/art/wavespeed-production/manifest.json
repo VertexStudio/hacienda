@@ -1,0 +1,343 @@
+{
+  "referenceImage": "https://media.githubusercontent.com/media/VertexStudio/hacienda/main/design/games/01-arma-el-presupuesto-de-el-salvador/sources/reference/game-1-reference.png",
+  "editEndpoint": "https://api.wavespeed.ai/api/v3/openai/gpt-image-2/edit",
+  "backgroundRemoverEndpoint": "https://api.wavespeed.ai/api/v3/wavespeed-ai/image-background-remover",
+  "generatedAt": null,
+  "jobs": {
+    "bg_game_shell_2x.webp": {
+      "id": "BG-01",
+      "filename": "bg_game_shell_2x.webp",
+      "width": 2360,
+      "height": 1640,
+      "alpha": false,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Full game backdrop only: pale sky to very light blue gradient, subtle San Salvador-inspired mountains, distant simplified city skyline, a few soft clouds and gentle civic-park greenery near the bottom edges. No UI cards, no buttons, no characters, no foreground panel. Do not include text, letters, numbers, labels, logos, UI frames, captions, or currency symbols.",
+      "generation": {
+        "predictionId": "5c5d5453a1094d05ae43e3175b81b99d",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/5c5d5453a1094d05ae43e3175b81b99d/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/aacdaacb-acb0-4c38-8163-579346b95d79.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/bg_game_shell_2x.wavespeed.png",
+        "completedAt": "2026-06-27T03:41:39.694Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/bg_game_shell_2x.webp",
+        "width": 2360,
+        "height": 1640,
+        "alpha": false,
+        "exportedAt": "2026-06-27T03:41:40.043Z"
+      }
+    },
+    "bg_skyline_overlay_2x.png": {
+      "id": "BG-02",
+      "filename": "bg_skyline_overlay_2x.png",
+      "width": 2360,
+      "height": 360,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Wide transparent overlay strip: simplified blue mountains behind a small civic city skyline with soft clouds, designed as a top-right decorative layer. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. Keep all artwork inside a shallow horizontal band. Do not include text, letters, numbers, labels, logos, UI frames, captions, or currency symbols.",
+      "generation": {
+        "predictionId": "e2ccffedb50c4f40b3f379b2ae8607e7",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/e2ccffedb50c4f40b3f379b2ae8607e7/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/ca43905b-3ed3-4caa-a3d3-b8665fd76d7d.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/bg_skyline_overlay_2x.wavespeed.png",
+        "completedAt": "2026-06-27T03:42:57.357Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "9729ff851e844d69b609a40521ce827b",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/9729ff851e844d69b609a40521ce827b/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/896f758c-113f-4308-9dc3-ba65f1ed3990-u2_91003282-d998-4324-a98b-db70429c5644.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/bg_skyline_overlay_2x.rembg.png",
+        "completedAt": "2026-06-27T03:43:10.339Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/bg_skyline_overlay_2x.png",
+        "width": 2360,
+        "height": 360,
+        "alpha": true,
+        "exportedAt": "2026-06-27T03:43:10.518Z"
+      }
+    },
+    "scene_intro_budget_hero_2x.webp": {
+      "id": "SC-01",
+      "filename": "scene_intro_budget_hero_2x.webp",
+      "width": 964,
+      "height": 912,
+      "alpha": false,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Main intro hero illustration for the right-side card: friendly civic building, respectful simplified blue-white-blue El Salvador flag motif, mountains, trees, coins and cash, and three diverse student/citizen characters working together around a budget activity. Complete rectangular scene with soft sky and park background, no UI controls. Do not include text, letters, numbers, labels, logos, UI frames, captions, or currency symbols.",
+      "generation": {
+        "predictionId": "9da4edb7469e41c991e709a012c8bf67",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/9da4edb7469e41c991e709a012c8bf67/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/ec1b5ec7-4275-4e8a-889a-3d093d34d6f1.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/scene_intro_budget_hero_2x.wavespeed.png",
+        "completedAt": "2026-06-27T03:44:05.584Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/scene_intro_budget_hero_2x.webp",
+        "width": 964,
+        "height": 912,
+        "alpha": false,
+        "exportedAt": "2026-06-27T03:44:05.697Z"
+      }
+    },
+    "scene_assignment_side_panel_2x.png": {
+      "id": "SC-02",
+      "filename": "scene_assignment_side_panel_2x.png",
+      "width": 360,
+      "height": 420,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Small supportive assignment-panel art: friendly guide character standing beside an open resource vault with coins and a simple budget bar motif. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. Do not include text, letters, numbers, labels, logos, UI frames, captions, or currency symbols.",
+      "generation": {
+        "predictionId": "f95a74932b124679a9114321e3cd0884",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/f95a74932b124679a9114321e3cd0884/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/bb0e31b1-ffb6-42cc-99fe-7cc5b073781a.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/scene_assignment_side_panel_2x.wavespeed.png",
+        "completedAt": "2026-06-27T03:45:23.603Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "3e3a5e7088604bd2b3fd93e1c78ecd03",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/3e3a5e7088604bd2b3fd93e1c78ecd03/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/1df3a6bb-f7d9-4179-a76d-8828b86a790d-u1_f807fd0c-f1c1-4618-ba94-4a27757a8a06.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/scene_assignment_side_panel_2x.rembg.png",
+        "completedAt": "2026-06-27T03:45:30.301Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/scene_assignment_side_panel_2x.png",
+        "width": 360,
+        "height": 420,
+        "alpha": true,
+        "exportedAt": "2026-06-27T03:45:30.393Z"
+      }
+    },
+    "scene_results_success_2x.png": {
+      "id": "SC-03",
+      "filename": "scene_results_success_2x.png",
+      "width": 420,
+      "height": 360,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Results support art: small trophy, light civic celebration confetti shapes, coins, and a subtle checkmark motif. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. No large scene, no characters. Do not include text, letters, numbers, labels, logos, UI frames, captions, or currency symbols.",
+      "generation": {
+        "predictionId": "2bcc36d831644e05bf7b693997448366",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/2bcc36d831644e05bf7b693997448366/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/f2fbaf0c-075c-4966-b351-493a9496d53b.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/scene_results_success_2x.wavespeed.png",
+        "completedAt": "2026-06-27T03:46:03.866Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "bb13710469db4b7ba2ed3b50872c97e0",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/bb13710469db4b7ba2ed3b50872c97e0/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/9e04edfc-bbea-4012-b330-352296b42e66-u2_fb7f82e4-b9b3-4526-b669-7ae224beb7d0.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/scene_results_success_2x.rembg.png",
+        "completedAt": "2026-06-27T03:46:10.408Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/scene_results_success_2x.png",
+        "width": 420,
+        "height": 360,
+        "alpha": true,
+        "exportedAt": "2026-06-27T03:46:10.492Z"
+      }
+    },
+    "character_student_notebook_full_2x.png": {
+      "id": "CH-01",
+      "filename": "character_student_notebook_full_2x.png",
+      "width": 640,
+      "height": 960,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Full-body Salvadoran student/citizen character holding a notebook or folder, warm curious expression, casual school-friendly outfit, standing pose. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. Full body visible from head to shoes. Do not include text, letters, numbers, labels, logos, UI frames, captions, or currency symbols.",
+      "generation": {
+        "predictionId": "6a03d2b1219e45d2a78ec951744b1771",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/6a03d2b1219e45d2a78ec951744b1771/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/fdad5390-bac1-4818-b59c-c5800940cd8e.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/character_student_notebook_full_2x.wavespeed.png",
+        "completedAt": "2026-06-27T03:47:21.672Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "9938fbebfe2d4d1392f0d4b6d947196a",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/9938fbebfe2d4d1392f0d4b6d947196a/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/35146e87-f11c-4e57-9281-a47013ed2bd1-u1_8492df35-a390-4f1c-b114-494301ce8621.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/character_student_notebook_full_2x.rembg.png",
+        "completedAt": "2026-06-27T03:47:28.273Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/character_student_notebook_full_2x.png",
+        "width": 640,
+        "height": 960,
+        "alpha": true,
+        "exportedAt": "2026-06-27T03:47:28.409Z"
+      }
+    },
+    "character_student_hoodie_full_2x.png": {
+      "id": "CH-02",
+      "filename": "character_student_hoodie_full_2x.png",
+      "width": 640,
+      "height": 960,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Full-body Salvadoran student/citizen character wearing a hoodie, friendly confident expression, casual civic education game style, standing pose. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. Full body visible from head to shoes. Do not include text, letters, numbers, labels, logos, UI frames, captions, or currency symbols.",
+      "generation": {
+        "predictionId": "e922735fcfef46038a902155d94190dd",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/e922735fcfef46038a902155d94190dd/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/dc7dcc7a-2578-40b6-b32b-caa3cf1ff5fe.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/character_student_hoodie_full_2x.wavespeed.png",
+        "completedAt": "2026-06-27T03:48:12.671Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "f4239235d928438198eb6eb66021a0ef",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/f4239235d928438198eb6eb66021a0ef/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/ece85649-2368-43da-9fec-ebb18dc2f603-u2_25bc01a1-efc8-4cfc-bfd8-e656d90ff54d.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/character_student_hoodie_full_2x.rembg.png",
+        "completedAt": "2026-06-27T03:48:19.174Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/character_student_hoodie_full_2x.png",
+        "width": 640,
+        "height": 960,
+        "alpha": true,
+        "exportedAt": "2026-06-27T03:48:19.310Z"
+      }
+    },
+    "character_student_glasses_full_2x.png": {
+      "id": "CH-03",
+      "filename": "character_student_glasses_full_2x.png",
+      "width": 640,
+      "height": 960,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Full-body Salvadoran student/citizen character with glasses and overalls or a neat casual outfit, thoughtful friendly expression, standing pose. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. Full body visible from head to shoes. Do not include text, letters, numbers, labels, logos, UI frames, captions, or currency symbols.",
+      "generation": {
+        "predictionId": "ea9f3e37ed564314acd4d48290a22668",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/ea9f3e37ed564314acd4d48290a22668/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/c788a63e-a4bd-46c4-9f4e-fd656d66c329.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/character_student_glasses_full_2x.wavespeed.png",
+        "completedAt": "2026-06-27T03:49:25.214Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "c7bec7b38b1c4e8c975846f56733537c",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/c7bec7b38b1c4e8c975846f56733537c/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/6125ece0-0648-4d9b-b58c-7511382a282e-u2_8f951006-0bba-4e3f-8ed3-3511a8f73b98.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/character_student_glasses_full_2x.rembg.png",
+        "completedAt": "2026-06-27T03:49:31.924Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/character_student_glasses_full_2x.png",
+        "width": 640,
+        "height": 960,
+        "alpha": true,
+        "exportedAt": "2026-06-27T03:49:32.059Z"
+      }
+    },
+    "character_guide_happy_2x.png": {
+      "id": "CH-05",
+      "filename": "character_guide_happy_2x.png",
+      "width": 512,
+      "height": 512,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Shoulders-up guide avatar matching the existing neutral guide: friendly Salvadoran student/citizen, happy encouraging expression, slight celebratory pose. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. Do not include text, letters, numbers, labels, logos, UI frames, captions, or currency symbols.",
+      "generation": {
+        "predictionId": "fd8fe9e8c3114c6faf478b8205294c62",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/fd8fe9e8c3114c6faf478b8205294c62/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/67dcdcd3-d54e-4ba3-aade-cff9a1402d96.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/character_guide_happy_2x.wavespeed.png",
+        "completedAt": "2026-06-27T03:50:48.741Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "f7261058309f47518abcaf028976d0ad",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/f7261058309f47518abcaf028976d0ad/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/ea7769ea-7a98-44d4-b7e8-63985c514b52-u2_0c09c13e-3bf3-4278-9080-2ff6d93cc135.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/character_guide_happy_2x.rembg.png",
+        "completedAt": "2026-06-27T03:50:55.325Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/character_guide_happy_2x.png",
+        "width": 512,
+        "height": 512,
+        "alpha": true,
+        "exportedAt": "2026-06-27T03:50:55.415Z"
+      }
+    },
+    "character_guide_thinking_2x.png": {
+      "id": "CH-06",
+      "filename": "character_guide_thinking_2x.png",
+      "width": 512,
+      "height": 512,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Shoulders-up guide avatar matching the existing neutral guide: friendly Salvadoran student/citizen, thinking expression, one hand near chin, reflective but approachable. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. Do not include text, letters, numbers, labels, logos, UI frames, captions, or currency symbols.",
+      "generation": {
+        "predictionId": "1994f39c892644d18bcb8f37ceceeda3",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/1994f39c892644d18bcb8f37ceceeda3/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/79aeaaf2-ef89-4038-8d25-61374efd524c.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/character_guide_thinking_2x.wavespeed.png",
+        "completedAt": "2026-06-27T03:52:12.028Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "2fb94d8701e04609830b0ba2ab7825d6",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/2fb94d8701e04609830b0ba2ab7825d6/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/21604e63-35c7-44ce-b462-a18d7547b52b-u2_310f0d1b-84a4-4ecf-a5cd-553719a5923a.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/character_guide_thinking_2x.rembg.png",
+        "completedAt": "2026-06-27T03:52:18.636Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/character_guide_thinking_2x.png",
+        "width": 512,
+        "height": 512,
+        "alpha": true,
+        "exportedAt": "2026-06-27T03:52:18.725Z"
+      }
+    },
+    "prop_government_building_2x.png": {
+      "id": "PR-01",
+      "filename": "prop_government_building_2x.png",
+      "width": 640,
+      "height": 420,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Standalone civic government building motif: clean white and light-blue building, simple columns, small dome shape, warm yellow accents, respectful institutional feel. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. Do not include text, letters, numbers, labels, logos, UI frames, captions, or currency symbols.",
+      "generation": {
+        "predictionId": "1bee47a907c247d1b5d8511c20600ece",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/1bee47a907c247d1b5d8511c20600ece/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/ac6977fc-b6bb-4c31-a24e-7b87ffc22f85.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/prop_government_building_2x.wavespeed.png",
+        "completedAt": "2026-06-27T03:53:35.293Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "87a76c4e6f4a44c5bacad673fd843303",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/87a76c4e6f4a44c5bacad673fd843303/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/d28b51fd-f530-4e8d-8d34-4745df898a02-u1_cce63dbe-0149-4aa8-9b91-c3d670858df5.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/prop_government_building_2x.rembg.png",
+        "completedAt": "2026-06-27T03:53:47.408Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/prop_government_building_2x.png",
+        "width": 640,
+        "height": 420,
+        "alpha": true,
+        "exportedAt": "2026-06-27T03:53:47.509Z"
+      }
+    },
+    "prop_el_salvador_flag_2x.png": {
+      "id": "PR-02",
+      "filename": "prop_el_salvador_flag_2x.png",
+      "width": 256,
+      "height": 192,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Isolated prop only: one small respectful simplified El Salvador flag on a short pole, front-facing and only gently waving so the three horizontal bands are clearly readable: bright blue top band, clean white middle band, bright blue bottom band. The middle white band must be wide and visible. The image must contain only the flag and pole, nothing else: no people, no buildings, no coins, no landscape, no piggy bank, no chart. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. No coat of arms details. Do not include text, letters, numbers, labels, logos, UI frames, captions, or currency symbols.",
+      "generation": {
+        "predictionId": "8368475507b7456fbd0cf5a89e81b17a",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/8368475507b7456fbd0cf5a89e81b17a/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/1abda329-fed5-41b3-be39-c75a0a1668bb.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/prop_el_salvador_flag_2x.wavespeed.png",
+        "completedAt": "2026-06-27T03:58:22.188Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "3eb1024d37e4474eb624fe2e543f926a",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/3eb1024d37e4474eb624fe2e543f926a/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/c6ec8733-8206-4457-8e74-47485822e23e-u1_91f6c33a-1504-4f63-8eba-f6d61db9ba4f.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/prop_el_salvador_flag_2x.rembg.png",
+        "completedAt": "2026-06-27T03:58:29.083Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/prop_el_salvador_flag_2x.png",
+        "width": 256,
+        "height": 192,
+        "alpha": true,
+        "exportedAt": "2026-06-27T03:58:29.176Z"
+      }
+    }
+  },
+  "updatedAt": "2026-06-27T03:58:29.176Z"
+}
