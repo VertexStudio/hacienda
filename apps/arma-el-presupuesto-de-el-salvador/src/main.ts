@@ -516,7 +516,8 @@ class BudgetSimulatorScene extends Phaser.Scene {
     const rect = this.add
       .rectangle(0, 0, width, height, colors.fill)
       .setOrigin(0)
-      .setStrokeStyle(1, colors.stroke);
+      .setStrokeStyle(1, colors.stroke)
+      .setInteractive({ useHandCursor: true });
     const text = this.add
       .text(width / 2, height / 2, label, {
         color: colors.text,
@@ -530,10 +531,9 @@ class BudgetSimulatorScene extends Phaser.Scene {
 
     container.add([rect, text]);
     container.setSize(width, height);
-    container.setInteractive(new Phaser.Geom.Rectangle(0, 0, width, height), Phaser.Geom.Rectangle.Contains);
-    container.on("pointerover", () => rect.setFillStyle(variant === "primary" ? 0xffd96f : 0xf0f5ef));
-    container.on("pointerout", () => rect.setFillStyle(colors.fill));
-    container.on("pointerdown", onClick);
+    rect.on("pointerover", () => rect.setFillStyle(variant === "primary" ? 0xffd96f : 0xf0f5ef));
+    rect.on("pointerout", () => rect.setFillStyle(colors.fill));
+    rect.on("pointerdown", onClick);
     return container;
   }
 
