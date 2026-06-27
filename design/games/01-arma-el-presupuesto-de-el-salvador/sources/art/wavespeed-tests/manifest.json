@@ -1,0 +1,30 @@
+{
+  "referenceImage": "https://media.githubusercontent.com/media/VertexStudio/hacienda/main/design/games/01-arma-el-presupuesto-de-el-salvador/sources/reference/game-1-reference.png",
+  "jobs": [
+    {
+      "filename": "icon_sector_education_2x.test.png",
+      "prompt": "Using the provided style-board image only as a visual style reference, create one clean standalone education sector icon: a friendly semi-flat blue book with a small graduation-cap accent, centered, no text, no letters, no UI frame, transparent or plain very light background, crisp game icon, suitable for 128 by 128 pixel export.",
+      "aspect_ratio": "1:1",
+      "prediction_id": null,
+      "output_url": null,
+      "local_path": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-tests/icon_sector_education_2x.test.png",
+      "notes": "Recovered local output from sync-mode run; manifest was not written before the later 504 error."
+    },
+    {
+      "filename": "prop_coin_cash_stack_2x.test.png",
+      "prompt": "Using the provided style-board image only as a visual style reference, create one standalone game prop: a stack of gold coins next to green cash bills, friendly semi-flat civic education style, soft shadow, no text, no characters, transparent or plain very light background, suitable for 512 by 384 pixel export.",
+      "aspect_ratio": "4:3",
+      "prediction_id": "3ce338a74a2e49cd8d4d2ad867e58439",
+      "output_url": "https://d2p7pge43lyniu.cloudfront.net/output/53860547-272b-404b-831d-ceb40f334a9f.png",
+      "local_path": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-tests/prop_coin_cash_stack_2x.test.png"
+    },
+    {
+      "filename": "character_guide_neutral_2x.test.png",
+      "prompt": "Using the provided style-board image only as a visual style reference, create one neutral guide avatar for the budget game: friendly young Salvadoran student/citizen character, warm expression, shoulders-up portrait, semi-flat polished educational game illustration, no text, transparent or plain very light background, suitable for 512 by 512 pixel export.",
+      "aspect_ratio": "1:1",
+      "prediction_id": "7d9eaf738d9d41eebafadb5ec8692b1c",
+      "output_url": "https://d2p7pge43lyniu.cloudfront.net/output/a23afee2-6a51-4c16-8d78-d0a194abbe91.png",
+      "local_path": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-tests/character_guide_neutral_2x.test.png"
+    }
+  ]
+}
