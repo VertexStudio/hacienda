@@ -1,5 +1,8 @@
 import Phaser from "phaser";
 import "./styles.css";
+import guideAvatarUrl from "./assets/art/character_guide_neutral_2x.png";
+import educationIconUrl from "./assets/art/icon_sector_education_2x.png";
+import coinCashStackUrl from "./assets/art/prop_coin_cash_stack_2x.png";
 
 const WIDTH = 1180;
 const HEIGHT = 820;
@@ -36,6 +39,12 @@ const TEXT = {
   ink: "#092154",
   muted: "#4F6072",
   soft: "#6F8094"
+};
+
+const IMAGE_KEYS = {
+  guideAvatar: "character-guide-neutral",
+  educationIcon: "icon-sector-education",
+  coinCashStack: "prop-coin-cash-stack"
 };
 
 type ScreenName = "intro" | "assignment" | "bridge" | "comparison";
@@ -203,6 +212,12 @@ class BudgetSimulatorScene extends Phaser.Scene {
     super("BudgetSimulatorScene");
   }
 
+  preload() {
+    this.load.image(IMAGE_KEYS.guideAvatar, guideAvatarUrl);
+    this.load.image(IMAGE_KEYS.educationIcon, educationIconUrl);
+    this.load.image(IMAGE_KEYS.coinCashStack, coinCashStackUrl);
+  }
+
   create() {
     this.resetAllocations();
     this.renderIntro();
@@ -279,8 +294,9 @@ class BudgetSimulatorScene extends Phaser.Scene {
       message ??
       "Arrastra o toca las barras para asignar presupuesto. Cada decisión cambia el superávit disponible.";
     this.addPanel(48, 692, 760, 86, COLORS.panel, COLORS.line, 0.96, 8);
-    this.addText(68, 706, "Traductor ciudadano", 13, TEXT.teal, 240, "bold");
-    this.feedbackText = this.addText(68, 728, feedback, 16, TEXT.muted, 720);
+    this.add.image(86, 735, IMAGE_KEYS.guideAvatar).setDisplaySize(62, 62);
+    this.addText(128, 706, "Traductor ciudadano", 13, TEXT.teal, 240, "bold");
+    this.feedbackText = this.addText(128, 728, feedback, 16, TEXT.muted, 650);
     this.addButton(850, 704, 270, 60, "Ver mi presupuesto", () => this.renderBridge(), "primary");
   }
 
@@ -501,6 +517,10 @@ class BudgetSimulatorScene extends Phaser.Scene {
 
   private drawSectorIcon(x: number, y: number, sector: Sector, radius: number) {
     this.add.circle(x, y, radius, COLORS.panel).setStrokeStyle(2, sector.color);
+    if (sector.id === "educacion") {
+      this.add.image(x, y, IMAGE_KEYS.educationIcon).setDisplaySize(radius * 2.15, radius * 2.15);
+      return;
+    }
     const size = radius <= 11 ? 11 : 15;
     this.addText(x - radius + 3, y - size / 1.45, sector.icon, size, this.colorHex(sector.color), radius * 2, "bold");
   }
@@ -549,7 +569,7 @@ class BudgetSimulatorScene extends Phaser.Scene {
     this.drawFlag(x + 282, y + 91);
     this.drawTree(x + 78, y + 214, 0.82);
     this.drawTree(x + 404, y + 212, 0.72);
-    this.drawCoins(x + 360, y + 334);
+    this.add.image(x + 388, y + 344, IMAGE_KEYS.coinCashStack).setDisplaySize(128, 96);
     this.drawStudent(x + 105, y + 324, COLORS.yellow, 0x4a2d1a);
     this.drawStudent(x + 210, y + 316, COLORS.teal, 0x162436);
     this.drawStudent(x + 314, y + 324, COLORS.coral, 0x2d1b14);

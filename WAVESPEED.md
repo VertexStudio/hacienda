@@ -137,6 +137,24 @@ Generated files:
 
 These are proof-of-life assets, not final production art.
 
+Game-ready validation exports are stored under:
+
+```text
+apps/arma-el-presupuesto-de-el-salvador/src/assets/art/
+```
+
+Integrated files:
+
+- `icon_sector_education_2x.png` at `128 x 128`
+- `prop_coin_cash_stack_2x.png` at `512 x 384`
+- `character_guide_neutral_2x.png` at `512 x 512`
+
+Review contact sheet:
+
+```text
+design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-tests/contact-sheets/final-assets-contact-sheet.png
+```
+
 ## What Worked
 
 - The model accepted the Game 1 reference image when using the `media.githubusercontent.com` URL.
@@ -148,6 +166,16 @@ These are proof-of-life assets, not final production art.
 - Background remover outputs are RGBA PNGs with real transparent pixels:
   - `alpha-min=0`
   - `alpha-max=1`
+- Deterministic post-processing completed successfully with ImageMagick:
+  - Cropped transparent padding.
+  - Resized/padded to exact art-inventory dimensions.
+  - Preserved alpha channels.
+- Phaser/Vite integration completed successfully:
+  - `icon_sector_education_2x.png` is loaded and rendered in the sector list/chart.
+  - `prop_coin_cash_stack_2x.png` is loaded and rendered in the intro hero.
+  - `character_guide_neutral_2x.png` is loaded and rendered in the assignment feedback panel.
+- `npm run build` bundled the imported PNG assets into the GitHub Pages output.
+- GitHub Pages PNG outputs are explicitly excluded from Git LFS in `.gitattributes` so the browser receives real images instead of LFS pointer files.
 
 ## What Did Not Work Or Needs Care
 
@@ -228,3 +256,11 @@ Crop transparent padding:
 ```sh
 magick input.png -trim +repage output.png
 ```
+
+End-to-end test command used for exact exports:
+
+```sh
+magick input.rembg.png -trim +repage -resize 112x112 -background none -gravity center -extent 128x128 output.png
+```
+
+Adjust the `-resize` and `-extent` values per `art-inventory.md`.
