@@ -438,7 +438,7 @@ class BudgetSimulatorScene extends Phaser.Scene {
 
   private drawHeader(title: string, subtitle: string) {
     this.addText(48, 34, title, 38, "#17211f", 700, "bold");
-    this.addText(50, 84, subtitle, 19, "#51605c", 780);
+    this.addText(50, 84, subtitle, 17, "#51605c", 1040);
   }
 
   private drawBackground() {
