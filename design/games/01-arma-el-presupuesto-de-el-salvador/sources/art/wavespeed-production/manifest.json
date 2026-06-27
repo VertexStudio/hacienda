@@ -23,7 +23,7 @@
         "width": 2360,
         "height": 1640,
         "alpha": false,
-        "exportedAt": "2026-06-27T03:41:40.043Z"
+        "exportedAt": "2026-06-27T03:59:43.621Z"
       }
     },
     "bg_skyline_overlay_2x.png": {
@@ -52,7 +52,7 @@
         "width": 2360,
         "height": 360,
         "alpha": true,
-        "exportedAt": "2026-06-27T03:43:10.518Z"
+        "exportedAt": "2026-06-27T03:59:43.759Z"
       }
     },
     "scene_intro_budget_hero_2x.webp": {
@@ -74,7 +74,7 @@
         "width": 964,
         "height": 912,
         "alpha": false,
-        "exportedAt": "2026-06-27T03:44:05.697Z"
+        "exportedAt": "2026-06-27T03:59:43.859Z"
       }
     },
     "scene_assignment_side_panel_2x.png": {
@@ -103,7 +103,7 @@
         "width": 360,
         "height": 420,
         "alpha": true,
-        "exportedAt": "2026-06-27T03:45:30.393Z"
+        "exportedAt": "2026-06-27T03:59:43.947Z"
       }
     },
     "scene_results_success_2x.png": {
@@ -132,7 +132,7 @@
         "width": 420,
         "height": 360,
         "alpha": true,
-        "exportedAt": "2026-06-27T03:46:10.492Z"
+        "exportedAt": "2026-06-27T03:59:44.029Z"
       }
     },
     "character_student_notebook_full_2x.png": {
@@ -161,7 +161,7 @@
         "width": 640,
         "height": 960,
         "alpha": true,
-        "exportedAt": "2026-06-27T03:47:28.409Z"
+        "exportedAt": "2026-06-27T03:59:44.162Z"
       }
     },
     "character_student_hoodie_full_2x.png": {
@@ -190,7 +190,7 @@
         "width": 640,
         "height": 960,
         "alpha": true,
-        "exportedAt": "2026-06-27T03:48:19.310Z"
+        "exportedAt": "2026-06-27T03:59:44.296Z"
       }
     },
     "character_student_glasses_full_2x.png": {
@@ -219,7 +219,7 @@
         "width": 640,
         "height": 960,
         "alpha": true,
-        "exportedAt": "2026-06-27T03:49:32.059Z"
+        "exportedAt": "2026-06-27T03:59:44.428Z"
       }
     },
     "character_guide_happy_2x.png": {
@@ -248,7 +248,7 @@
         "width": 512,
         "height": 512,
         "alpha": true,
-        "exportedAt": "2026-06-27T03:50:55.415Z"
+        "exportedAt": "2026-06-27T03:59:44.516Z"
       }
     },
     "character_guide_thinking_2x.png": {
@@ -277,7 +277,7 @@
         "width": 512,
         "height": 512,
         "alpha": true,
-        "exportedAt": "2026-06-27T03:52:18.725Z"
+        "exportedAt": "2026-06-27T03:59:44.603Z"
       }
     },
     "prop_government_building_2x.png": {
@@ -306,7 +306,7 @@
         "width": 640,
         "height": 420,
         "alpha": true,
-        "exportedAt": "2026-06-27T03:53:47.509Z"
+        "exportedAt": "2026-06-27T03:59:44.706Z"
       }
     },
     "prop_el_salvador_flag_2x.png": {
@@ -335,9 +335,705 @@
         "width": 256,
         "height": 192,
         "alpha": true,
-        "exportedAt": "2026-06-27T03:58:29.176Z"
+        "exportedAt": "2026-06-27T03:59:44.761Z"
+      }
+    },
+    "prop_vault_coins_2x.png": {
+      "id": "PR-04",
+      "filename": "prop_vault_coins_2x.png",
+      "width": 512,
+      "height": 512,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Standalone resource vault/safe with open door and a few gold coins, friendly rounded game prop, teal and blue safe body, yellow coins. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. Do not include text, letters, numbers, labels, logos, UI frames, captions, or currency symbols.",
+      "generation": {
+        "predictionId": "0f8ffdeaeb044a3e9bb000ff3c6b11ae",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/0f8ffdeaeb044a3e9bb000ff3c6b11ae/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/be434454-6fe2-4aae-a2f0-f6f88eec9774.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/prop_vault_coins_2x.wavespeed.png",
+        "completedAt": "2026-06-27T04:01:01.594Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "f67f8fd9ca19444f955d08fd3d9d9164",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/f67f8fd9ca19444f955d08fd3d9d9164/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/0efaae72-d0cc-4b59-945c-22786ebee1c5-u2_489e23ab-e74d-4444-a8ce-def7af6595aa.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/prop_vault_coins_2x.rembg.png",
+        "completedAt": "2026-06-27T04:01:13.684Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/prop_vault_coins_2x.png",
+        "width": 512,
+        "height": 512,
+        "alpha": true,
+        "exportedAt": "2026-06-27T04:01:13.804Z"
+      }
+    },
+    "prop_piggy_bank_2x.png": {
+      "id": "PR-05",
+      "filename": "prop_piggy_bank_2x.png",
+      "width": 384,
+      "height": 384,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Standalone piggy bank savings prop with small coin shapes, friendly rounded semi-flat game style, teal or coral body, yellow coin accents. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. Do not include text, letters, numbers, labels, logos, UI frames, captions, or currency symbols.",
+      "generation": {
+        "predictionId": "dfd2402f6f724f07a3d126fc510bb979",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/dfd2402f6f724f07a3d126fc510bb979/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/ebf59f27-e8bc-48fc-9b95-614e4308ba83.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/prop_piggy_bank_2x.wavespeed.png",
+        "completedAt": "2026-06-27T04:01:58.182Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "80acf53bf72c4186b9238dba8a283c2c",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/80acf53bf72c4186b9238dba8a283c2c/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/7055de7b-81d7-4400-bffb-1abb1e506206-u1_b1a384f9-bc44-405c-9e6f-9b1f81188e52.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/prop_piggy_bank_2x.rembg.png",
+        "completedAt": "2026-06-27T04:02:26.376Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/prop_piggy_bank_2x.png",
+        "width": 384,
+        "height": 384,
+        "alpha": true,
+        "exportedAt": "2026-06-27T04:02:26.460Z"
+      }
+    },
+    "prop_trophy_2x.png": {
+      "id": "PR-06",
+      "filename": "prop_trophy_2x.png",
+      "width": 384,
+      "height": 384,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Standalone trophy reward prop with soft shine and small civic celebration accents, yellow/gold cup, blue base, game-readable silhouette. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. Do not include text, letters, numbers, labels, logos, UI frames, captions, or currency symbols.",
+      "generation": {
+        "predictionId": "01f41e1282d04c2982a2c43c3b99256b",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/01f41e1282d04c2982a2c43c3b99256b/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/73619d63-cf43-40cc-a0d5-7769ab651db3.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/prop_trophy_2x.wavespeed.png",
+        "completedAt": "2026-06-27T04:03:48.745Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "39284996991e4f04972a5df045b460d3",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/39284996991e4f04972a5df045b460d3/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/8beb5469-4b7e-49d1-87c3-1bb3ed285241-u2_ae81c741-bc0c-45b2-a998-f76bc5cb2b54.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/prop_trophy_2x.rembg.png",
+        "completedAt": "2026-06-27T04:03:55.327Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/prop_trophy_2x.png",
+        "width": 384,
+        "height": 384,
+        "alpha": true,
+        "exportedAt": "2026-06-27T04:03:55.392Z"
+      }
+    },
+    "prop_info_badge_2x.png": {
+      "id": "PR-07",
+      "filename": "prop_info_badge_2x.png",
+      "width": 128,
+      "height": 128,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Standalone circular information/help badge icon, friendly blue and teal shape, use a simple abstract dot-and-stem info symbol only, no letters. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. No text or alphabetic i.",
+      "generation": {
+        "predictionId": "0a60c4e54ad34acebec5b7ef1fdcb403",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/0a60c4e54ad34acebec5b7ef1fdcb403/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/068bb224-2871-49f0-9191-c7ec6ce85b96.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/prop_info_badge_2x.wavespeed.png",
+        "completedAt": "2026-06-27T04:04:23.644Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "4f4e4ac5d8034efc96e640cd381e0268",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/4f4e4ac5d8034efc96e640cd381e0268/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/f50fea7e-a8c9-4661-b7ea-0ea6e52fe753-u1_52a081df-9c88-4e6a-9670-8b6d61a53272.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/prop_info_badge_2x.rembg.png",
+        "completedAt": "2026-06-27T04:04:30.542Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/prop_info_badge_2x.png",
+        "width": 128,
+        "height": 128,
+        "alpha": true,
+        "exportedAt": "2026-06-27T04:04:30.593Z"
+      }
+    },
+    "deco_cloud_small_2x.png": {
+      "id": "DE-01",
+      "filename": "deco_cloud_small_2x.png",
+      "width": 256,
+      "height": 128,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Isolated decoration only: one small soft white cloud shape, simple rounded semi-flat form with very light blue shading. The image must contain only the cloud, nothing else: no buildings, no people, no trees, no flag, no coins, no landscape, no skyline. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. Do not include text, letters, numbers, labels, logos, UI frames, captions, or currency symbols.",
+      "generation": {
+        "predictionId": "a7b7d022f54d42c796f2e534389f4815",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/a7b7d022f54d42c796f2e534389f4815/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/dbcf22c3-9789-4b81-8285-829ce63ae319.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/deco_cloud_small_2x.wavespeed.png",
+        "completedAt": "2026-06-27T04:26:44.399Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "2cd8b413799f4e9099555c87cca877f9",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/2cd8b413799f4e9099555c87cca877f9/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/c37da009-0066-4578-9cac-f31af06f412a-u1_554321f8-0db9-461b-965b-41b7f170417f.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/deco_cloud_small_2x.rembg.png",
+        "completedAt": "2026-06-27T04:27:55.115Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/deco_cloud_small_2x.png",
+        "width": 256,
+        "height": 128,
+        "alpha": true,
+        "exportedAt": "2026-06-27T04:28:08.552Z"
+      }
+    },
+    "deco_cloud_medium_2x.png": {
+      "id": "DE-02",
+      "filename": "deco_cloud_medium_2x.png",
+      "width": 384,
+      "height": 192,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Isolated decoration only: one medium soft white cloud shape, simple rounded semi-flat form with very light blue shading. The image must contain only the cloud, nothing else: no buildings, no people, no trees, no flag, no coins, no landscape, no skyline. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. Do not include text, letters, numbers, labels, logos, UI frames, captions, or currency symbols.",
+      "generation": {
+        "predictionId": "7277790b52d7452381c888d07d5e0922",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/7277790b52d7452381c888d07d5e0922/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/14ad9e95-589c-49ba-9654-5f2e305a273a.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/deco_cloud_medium_2x.wavespeed.png",
+        "completedAt": "2026-06-27T04:27:13.044Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "dfaeea6e00544e9e8755d115fe77e22a",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/dfaeea6e00544e9e8755d115fe77e22a/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/376e281c-b1d2-4223-a8a9-ef4f2b2b89c6-u1_a0cf6aa4-6609-4ade-a65f-2e1dc5c1a198.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/deco_cloud_medium_2x.rembg.png",
+        "completedAt": "2026-06-27T04:28:01.960Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/deco_cloud_medium_2x.png",
+        "width": 384,
+        "height": 192,
+        "alpha": true,
+        "exportedAt": "2026-06-27T04:28:08.644Z"
+      }
+    },
+    "deco_cloud_large_2x.png": {
+      "id": "DE-03",
+      "filename": "deco_cloud_large_2x.png",
+      "width": 512,
+      "height": 256,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Isolated decoration only: one large soft white cloud shape, simple rounded semi-flat form with very light blue shading. The image must contain only the cloud, nothing else: no buildings, no people, no trees, no flag, no coins, no landscape, no skyline. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. Do not include text, letters, numbers, labels, logos, UI frames, captions, or currency symbols.",
+      "generation": {
+        "predictionId": "19fd124daf7b49e88a0d5fb0bc500a3b",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/19fd124daf7b49e88a0d5fb0bc500a3b/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/4c728e5b-f1a2-4ff9-8542-5ed48421d13e.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/deco_cloud_large_2x.wavespeed.png",
+        "completedAt": "2026-06-27T04:27:47.927Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "552f509dea8345e39429e9b05deb8f61",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/552f509dea8345e39429e9b05deb8f61/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/4ee7a8c3-c69f-4003-ba85-bcaec6558af2-u1_03d462ec-9db3-425a-9f77-4cf4a694caba.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/deco_cloud_large_2x.rembg.png",
+        "completedAt": "2026-06-27T04:28:08.455Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/deco_cloud_large_2x.png",
+        "width": 512,
+        "height": 256,
+        "alpha": true,
+        "exportedAt": "2026-06-27T04:28:08.722Z"
+      }
+    },
+    "deco_tree_2x.png": {
+      "id": "DE-04",
+      "filename": "deco_tree_2x.png",
+      "width": 256,
+      "height": 256,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Standalone friendly civic park tree decoration, rounded green canopy, simple brown trunk, semi-flat game style. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. Do not include text, letters, numbers, labels, logos, UI frames, captions, or currency symbols.",
+      "generation": {
+        "predictionId": "ed77521ec92b44eb9818deb248b92110",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/ed77521ec92b44eb9818deb248b92110/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/9292212c-4e92-4aed-98cb-77cbb1d7530f.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/deco_tree_2x.wavespeed.png",
+        "completedAt": "2026-06-27T04:08:26.143Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "1133fb06f79b4c3faeb6708eb8015bb6",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/1133fb06f79b4c3faeb6708eb8015bb6/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/c13720d0-d7f8-40fb-8a00-4bdc5be7096c-u2_a71117d8-6eb8-48f4-a715-54055e66b714.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/deco_tree_2x.rembg.png",
+        "completedAt": "2026-06-27T04:08:32.852Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/deco_tree_2x.png",
+        "width": 256,
+        "height": 256,
+        "alpha": true,
+        "exportedAt": "2026-06-27T04:08:32.915Z"
+      }
+    },
+    "deco_bush_flowers_2x.png": {
+      "id": "DE-05",
+      "filename": "deco_bush_flowers_2x.png",
+      "width": 512,
+      "height": 256,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Standalone low bush with small simple flowers for civic park scenes, green rounded foliage with tiny coral/yellow flower accents. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. Do not include text, letters, numbers, labels, logos, UI frames, captions, or currency symbols.",
+      "generation": {
+        "predictionId": "89b16c7978204784a0b1180847fd2a3d",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/89b16c7978204784a0b1180847fd2a3d/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/317cbebb-3d57-476f-b07f-50ed9f824464.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/deco_bush_flowers_2x.wavespeed.png",
+        "completedAt": "2026-06-27T04:09:06.280Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "309b56c75cdd45328e93affda249bcce",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/309b56c75cdd45328e93affda249bcce/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/3f0d2cf7-6cb5-444d-9e51-5eea52533367-u2_fcf3535d-aed5-4bb6-a0a5-406d9a318bfa.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/deco_bush_flowers_2x.rembg.png",
+        "completedAt": "2026-06-27T04:09:12.774Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/deco_bush_flowers_2x.png",
+        "width": 512,
+        "height": 256,
+        "alpha": true,
+        "exportedAt": "2026-06-27T04:09:12.855Z"
+      }
+    },
+    "deco_mountain_city_2x.png": {
+      "id": "DE-06",
+      "filename": "deco_mountain_city_2x.png",
+      "width": 1400,
+      "height": 420,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Wide transparent decorative mountain and city skyline element: soft blue mountains behind a simplified city silhouette and a few trees, shallow horizontal composition. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. Do not include text, letters, numbers, labels, logos, UI frames, captions, or currency symbols.",
+      "generation": {
+        "predictionId": "cf7c04b648784f63a2c14f2786c0e6a1",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/cf7c04b648784f63a2c14f2786c0e6a1/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/7caac0b8-5119-475f-8cb8-e57d93e7a7a9.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/deco_mountain_city_2x.wavespeed.png",
+        "completedAt": "2026-06-27T04:09:41.120Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "03a0c89d1f57426a9bfe4f6c8d6cd65f",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/03a0c89d1f57426a9bfe4f6c8d6cd65f/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/33895fb2-ce45-49c0-b98f-224c14f4a700-u2_584b2e17-fef2-4e87-bc63-cf5bb1a1f250.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/deco_mountain_city_2x.rembg.png",
+        "completedAt": "2026-06-27T04:09:53.167Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/deco_mountain_city_2x.png",
+        "width": 1400,
+        "height": 420,
+        "alpha": true,
+        "exportedAt": "2026-06-27T04:09:53.389Z"
+      }
+    },
+    "icon_sector_health_2x.png": {
+      "id": "IC-02",
+      "filename": "icon_sector_health_2x.png",
+      "width": 128,
+      "height": 128,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Simple readable health sector game icon: coral heart with a small pulse line motif, clean silhouette, centered. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. Do not include text, letters, numbers, labels, logos, UI frames, captions, or currency symbols.",
+      "generation": {
+        "predictionId": "e3c67b35377d40778f4b2da83d8d2eef",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/e3c67b35377d40778f4b2da83d8d2eef/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/67e26cab-ac10-48e7-9fda-65437ba62536.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/icon_sector_health_2x.wavespeed.png",
+        "completedAt": "2026-06-27T04:10:37.548Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "f3f033593285459a985654c52ba9591d",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/f3f033593285459a985654c52ba9591d/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/2173dd26-f263-4111-9bbe-5039f3da09b9-u1_054ce073-27f0-42b2-a99a-061b03c6dc41.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/icon_sector_health_2x.rembg.png",
+        "completedAt": "2026-06-27T04:10:44.098Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/icon_sector_health_2x.png",
+        "width": 128,
+        "height": 128,
+        "alpha": true,
+        "exportedAt": "2026-06-27T04:10:44.207Z"
+      }
+    },
+    "icon_sector_security_2x.png": {
+      "id": "IC-03",
+      "filename": "icon_sector_security_2x.png",
+      "width": 128,
+      "height": 128,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Simple readable public security sector game icon: blue-gray shield with friendly rounded shape and subtle teal accent, centered. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. Do not include text, letters, numbers, labels, logos, UI frames, captions, or currency symbols.",
+      "generation": {
+        "predictionId": "92e67c50753f4810aad0875fbf079168",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/92e67c50753f4810aad0875fbf079168/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/31aa453f-3a6b-44f6-9148-f0a2df180834.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/icon_sector_security_2x.wavespeed.png",
+        "completedAt": "2026-06-27T04:12:00.913Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "70386fd2cb644868a1309fefd30f0bdf",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/70386fd2cb644868a1309fefd30f0bdf/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/1ed6aa7d-d481-42a8-97c8-249e19383a7e-u2_48eb6f86-319f-4792-ab74-8ea61109f479.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/icon_sector_security_2x.rembg.png",
+        "completedAt": "2026-06-27T04:12:12.884Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/icon_sector_security_2x.png",
+        "width": 128,
+        "height": 128,
+        "alpha": true,
+        "exportedAt": "2026-06-27T04:12:12.929Z"
+      }
+    },
+    "icon_sector_defense_2x.png": {
+      "id": "IC-04",
+      "filename": "icon_sector_defense_2x.png",
+      "width": 128,
+      "height": 128,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Simple readable national defense sector game icon: respectful helmet or protective emblem silhouette, green and blue-gray accents, centered. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. Do not include text, letters, numbers, labels, logos, UI frames, captions, or currency symbols.",
+      "generation": {
+        "predictionId": "d911e43b8ec84bec8144b12ee9ee8a80",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/d911e43b8ec84bec8144b12ee9ee8a80/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/1d8dfa31-2db1-46f6-9508-ef8b9c16ad3a.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/icon_sector_defense_2x.wavespeed.png",
+        "completedAt": "2026-06-27T04:13:29.641Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "d458ae4adcca44eaa81acfb431ffd002",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/d458ae4adcca44eaa81acfb431ffd002/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/65aeb582-86d5-4231-aa72-8e647664b459-u2_778a956d-f54d-4053-993d-6bb3bc766297.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/icon_sector_defense_2x.rembg.png",
+        "completedAt": "2026-06-27T04:13:41.640Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/icon_sector_defense_2x.png",
+        "width": 128,
+        "height": 128,
+        "alpha": true,
+        "exportedAt": "2026-06-27T04:13:41.688Z"
+      }
+    },
+    "icon_sector_infrastructure_2x.png": {
+      "id": "IC-05",
+      "filename": "icon_sector_infrastructure_2x.png",
+      "width": 128,
+      "height": 128,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Simple readable infrastructure and transport sector game icon: small bridge or road with construction accent, yellow and teal, centered. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. Do not include text, letters, numbers, labels, logos, UI frames, captions, or currency symbols.",
+      "generation": {
+        "predictionId": "bfe029249ac44052a6221550c501082a",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/bfe029249ac44052a6221550c501082a/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/934b3757-18c8-42f8-8fff-9ce750d5299b.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/icon_sector_infrastructure_2x.wavespeed.png",
+        "completedAt": "2026-06-27T04:14:15.161Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "df5cb86124014e72b8b2fb3017547ead",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/df5cb86124014e72b8b2fb3017547ead/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/20f45157-a6c3-47dd-b5fe-323b2031b07e-u2_8bb26c93-2bec-4663-ad1a-97b7843812e1.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/icon_sector_infrastructure_2x.rembg.png",
+        "completedAt": "2026-06-27T04:14:21.661Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/icon_sector_infrastructure_2x.png",
+        "width": 128,
+        "height": 128,
+        "alpha": true,
+        "exportedAt": "2026-06-27T04:14:21.710Z"
+      }
+    },
+    "icon_sector_social_programs_2x.png": {
+      "id": "IC-06",
+      "filename": "icon_sector_social_programs_2x.png",
+      "width": 128,
+      "height": 128,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Simple readable social programs and development sector game icon: friendly group-of-people symbol with three rounded figures, purple/teal/coral accents, centered. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. Do not include text, letters, numbers, labels, logos, UI frames, captions, or currency symbols.",
+      "generation": {
+        "predictionId": "53480ec94d0d46c388afc889c47f5b85",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/53480ec94d0d46c388afc889c47f5b85/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/2cb9ad9d-c0cd-4015-ae2f-c1e46bb9a634.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/icon_sector_social_programs_2x.wavespeed.png",
+        "completedAt": "2026-06-27T04:15:27.614Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "d1a59f256bc34fad98efef7d10cf724e",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/d1a59f256bc34fad98efef7d10cf724e/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/dfde6c98-4551-4844-8188-6100d53a68dd-u1_b0a182cb-450f-401b-b810-15ce9d7130be.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/icon_sector_social_programs_2x.rembg.png",
+        "completedAt": "2026-06-27T04:15:34.214Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/icon_sector_social_programs_2x.png",
+        "width": 128,
+        "height": 128,
+        "alpha": true,
+        "exportedAt": "2026-06-27T04:15:34.263Z"
+      }
+    },
+    "icon_sector_administration_2x.png": {
+      "id": "IC-07",
+      "filename": "icon_sector_administration_2x.png",
+      "width": 128,
+      "height": 128,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Simple readable state administration sector game icon: rounded gear and small document shape, teal and deep blue, centered. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. Do not include text, letters, numbers, labels, logos, UI frames, captions, or currency symbols.",
+      "generation": {
+        "predictionId": "c51854f29d174aadbabf2fbe294b8d78",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/c51854f29d174aadbabf2fbe294b8d78/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/3ae8ae38-2e0d-4b85-8c98-02870a408d0b.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/icon_sector_administration_2x.wavespeed.png",
+        "completedAt": "2026-06-27T04:16:19.346Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "dda6ca4418184deb8fe3d75fcde04ab2",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/dda6ca4418184deb8fe3d75fcde04ab2/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/db4c5444-c794-4b51-9aca-cf905df157cb-u1_ca086930-b282-477d-85d0-75a10e8c6a19.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/icon_sector_administration_2x.rembg.png",
+        "completedAt": "2026-06-27T04:16:25.796Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/icon_sector_administration_2x.png",
+        "width": 128,
+        "height": 128,
+        "alpha": true,
+        "exportedAt": "2026-06-27T04:16:25.846Z"
+      }
+    },
+    "icon_sector_transfers_2x.png": {
+      "id": "IC-08",
+      "filename": "icon_sector_transfers_2x.png",
+      "width": 128,
+      "height": 128,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Simple readable transfers and obligations sector game icon: two curved arrows exchanging small abstract resource dots, blue and teal, centered. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. Do not include text, letters, numbers, labels, logos, UI frames, captions, or currency symbols.",
+      "generation": {
+        "predictionId": "e1fd69b1811e403884a909c095de83db",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/e1fd69b1811e403884a909c095de83db/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/427505e6-c9a9-484a-ab49-5081f92a5a31.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/icon_sector_transfers_2x.wavespeed.png",
+        "completedAt": "2026-06-27T04:17:31.888Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "32237d13c7e8416a8b85d044127bd4b5",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/32237d13c7e8416a8b85d044127bd4b5/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/f39abc78-1731-4c26-af51-58416d087f24-u2_c22789eb-c9a6-477a-a21f-d075f3732fd6.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/icon_sector_transfers_2x.rembg.png",
+        "completedAt": "2026-06-27T04:17:38.650Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/icon_sector_transfers_2x.png",
+        "width": 128,
+        "height": 128,
+        "alpha": true,
+        "exportedAt": "2026-06-27T04:17:38.707Z"
+      }
+    },
+    "icon_sector_debt_2x.png": {
+      "id": "IC-09",
+      "filename": "icon_sector_debt_2x.png",
+      "width": 128,
+      "height": 128,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Simple readable debt payment sector game icon: small bank or bill with coin stack, yellow and blue, centered. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. No currency symbols. Do not include text, letters, numbers, labels, logos, UI frames, captions, or currency symbols.",
+      "generation": {
+        "predictionId": "e368a72c42bb4383b1bea830d4f96ab9",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/e368a72c42bb4383b1bea830d4f96ab9/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/20d0b5c6-39ff-44f2-8ece-e4fdfb7a629b.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/icon_sector_debt_2x.wavespeed.png",
+        "completedAt": "2026-06-27T04:18:55.777Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "388e704cb15041a3a6172ce9293ad0ae",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/388e704cb15041a3a6172ce9293ad0ae/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/8e4df5d3-a302-4730-928c-1566f56eb803-u2_e476f720-7325-4213-b5e5-d5d9f293ec90.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/icon_sector_debt_2x.rembg.png",
+        "completedAt": "2026-06-27T04:19:02.406Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/icon_sector_debt_2x.png",
+        "width": 128,
+        "height": 128,
+        "alpha": true,
+        "exportedAt": "2026-06-27T04:19:02.464Z"
+      }
+    },
+    "icon_sector_legislative_judicial_2x.png": {
+      "id": "IC-10",
+      "filename": "icon_sector_legislative_judicial_2x.png",
+      "width": 128,
+      "height": 128,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Simple readable legislative and judicial sector game icon: scales of justice and small gavel motif, purple and blue, centered. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. Do not include text, letters, numbers, labels, logos, UI frames, captions, or currency symbols.",
+      "generation": {
+        "predictionId": "62e82a55f5e1464caa57fec27790dfaa",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/62e82a55f5e1464caa57fec27790dfaa/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/3ff8ad4f-188f-4db6-b5b2-f318de9ea2ac.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/icon_sector_legislative_judicial_2x.wavespeed.png",
+        "completedAt": "2026-06-27T04:20:08.842Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "f5e0a92c57d64c8580ab5cb135a7e5ec",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/f5e0a92c57d64c8580ab5cb135a7e5ec/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/975f7fc1-337f-4feb-8c09-5e4f963b979e-u2_86ccdda2-b6fa-4d16-906f-a9987c40b57b.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/icon_sector_legislative_judicial_2x.rembg.png",
+        "completedAt": "2026-06-27T04:20:15.484Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/icon_sector_legislative_judicial_2x.png",
+        "width": 128,
+        "height": 128,
+        "alpha": true,
+        "exportedAt": "2026-06-27T04:20:15.530Z"
+      }
+    },
+    "ui_icon_chevron_right_2x.png": {
+      "id": "UI-01",
+      "filename": "ui_icon_chevron_right_2x.png",
+      "width": 64,
+      "height": 64,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Tiny UI icon: bold right chevron arrow mark only, deep blue, rounded friendly shape, centered. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. No text, no letters.",
+      "generation": {
+        "predictionId": "8796ee69daa241558c8195f225fc34f4",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/8796ee69daa241558c8195f225fc34f4/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/e15d195e-aea8-4da7-8327-2553557a6440.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/ui_icon_chevron_right_2x.wavespeed.png",
+        "completedAt": "2026-06-27T04:20:48.918Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "396ef927e0d8465ab5309f2331ab0370",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/396ef927e0d8465ab5309f2331ab0370/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/c03818cf-ce7f-4bae-91c6-71da51c19987-u2_a94877f1-cddd-4176-9a46-a52372417dfc.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/ui_icon_chevron_right_2x.rembg.png",
+        "completedAt": "2026-06-27T04:20:55.507Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/ui_icon_chevron_right_2x.png",
+        "width": 64,
+        "height": 64,
+        "alpha": true,
+        "exportedAt": "2026-06-27T04:20:55.543Z"
+      }
+    },
+    "ui_icon_restart_2x.png": {
+      "id": "UI-02",
+      "filename": "ui_icon_restart_2x.png",
+      "width": 64,
+      "height": 64,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Tiny UI icon: restart/refresh circular arrow mark only, deep blue with teal accent, rounded friendly shape, centered. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. No text, no letters.",
+      "generation": {
+        "predictionId": "72f844eed5b64b45a2902d516c800d73",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/72f844eed5b64b45a2902d516c800d73/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/e8a61c2a-6f98-4e3b-8c9d-7ccb0325b327.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/ui_icon_restart_2x.wavespeed.png",
+        "completedAt": "2026-06-27T04:21:28.873Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "14c56e2db29644388a36f7d8f701a4f2",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/14c56e2db29644388a36f7d8f701a4f2/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/84461327-3549-4ff4-8d32-a6376b7fab63-u2_1f8fbc09-b3b9-4351-b1db-5262e24794d0.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/ui_icon_restart_2x.rembg.png",
+        "completedAt": "2026-06-27T04:21:35.338Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/ui_icon_restart_2x.png",
+        "width": 64,
+        "height": 64,
+        "alpha": true,
+        "exportedAt": "2026-06-27T04:21:35.379Z"
+      }
+    },
+    "ui_icon_info_2x.png": {
+      "id": "UI-03",
+      "filename": "ui_icon_info_2x.png",
+      "width": 64,
+      "height": 64,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Tiny UI icon: abstract information/help symbol with a dot and vertical stem inside a circle, deep blue and teal, centered. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. No alphabetic letters, no text.",
+      "generation": {
+        "predictionId": "ed98fce1cb9f4e76bb4f4b720f3f259f",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/ed98fce1cb9f4e76bb4f4b720f3f259f/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/7c66f878-aaa3-450e-ae1b-2df3a3499f7e.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/ui_icon_info_2x.wavespeed.png",
+        "completedAt": "2026-06-27T04:22:41.649Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "46a1cf853ab74349a89b9b7d61104f09",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/46a1cf853ab74349a89b9b7d61104f09/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/a3ac2d13-d9be-428f-8ef3-fd3271fd3dd4-u1_bb840a1b-fc0f-4b80-b005-e9466d0202fe.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/ui_icon_info_2x.rembg.png",
+        "completedAt": "2026-06-27T04:22:48.452Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/ui_icon_info_2x.png",
+        "width": 64,
+        "height": 64,
+        "alpha": true,
+        "exportedAt": "2026-06-27T04:22:48.506Z"
+      }
+    },
+    "ui_icon_lightbulb_2x.png": {
+      "id": "UI-04",
+      "filename": "ui_icon_lightbulb_2x.png",
+      "width": 64,
+      "height": 64,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Tiny UI icon: lightbulb tips symbol only, yellow bulb with deep blue outline, rounded friendly shape, centered. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. No text, no letters.",
+      "generation": {
+        "predictionId": "7eb4af535ef24b24aa6e842461979ad0",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/7eb4af535ef24b24aa6e842461979ad0/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/99840354-7580-4e35-bf93-8d6262677247.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/ui_icon_lightbulb_2x.wavespeed.png",
+        "completedAt": "2026-06-27T04:23:55.326Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "5019a68eb2744b6a98cab2336eb55485",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/5019a68eb2744b6a98cab2336eb55485/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/9d424404-026d-4cff-98c2-11777f0dd51a-u2_210c747f-d8e2-458e-8fb5-52784c9884d5.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/ui_icon_lightbulb_2x.rembg.png",
+        "completedAt": "2026-06-27T04:24:02.209Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/ui_icon_lightbulb_2x.png",
+        "width": 64,
+        "height": 64,
+        "alpha": true,
+        "exportedAt": "2026-06-27T04:24:02.250Z"
+      }
+    },
+    "ui_icon_star_2x.png": {
+      "id": "UI-05",
+      "filename": "ui_icon_star_2x.png",
+      "width": 64,
+      "height": 64,
+      "alpha": true,
+      "prompt": "Using the provided style-board image only as a visual style reference, create one production-ready asset for a civic education budget game. Friendly semi-flat educational-game illustration, clean shapes, soft rounded forms, soft shadows, bright deep-blue/teal/yellow palette with tasteful coral and purple accents, polished but not photorealistic, no watermark. Tiny UI icon: friendly five-point star reward accent, yellow with subtle blue shadow, centered. Transparent-background-friendly standalone asset, centered composition, generous padding, crisp silhouette, no scene background. No text, no letters.",
+      "generation": {
+        "predictionId": "8160209ce13c4f8fa2e892e27e0cee53",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/8160209ce13c4f8fa2e892e27e0cee53/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/77ef3b27-3eb1-4e20-84d1-a7b080fa10df.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/generated/ui_icon_star_2x.wavespeed.png",
+        "completedAt": "2026-06-27T04:25:08.976Z"
+      },
+      "backgroundRemoval": {
+        "predictionId": "68c1f821554149ef85679a2bb8271663",
+        "getUrl": "https://api.wavespeed.ai/api/v3/predictions/68c1f821554149ef85679a2bb8271663/result",
+        "outputUrl": "https://d2p7pge43lyniu.cloudfront.net/output/828ac3b5-9ace-4499-9352-787b5004a18a-u2_5d54f1ae-8f42-4e0d-a616-afe521d45328.png",
+        "localPath": "design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/background-removed/ui_icon_star_2x.rembg.png",
+        "completedAt": "2026-06-27T04:25:15.734Z"
+      },
+      "export": {
+        "localPath": "apps/arma-el-presupuesto-de-el-salvador/src/assets/art/ui_icon_star_2x.png",
+        "width": 64,
+        "height": 64,
+        "alpha": true,
+        "exportedAt": "2026-06-27T04:25:15.778Z"
       }
     }
   },
-  "updatedAt": "2026-06-27T03:58:29.176Z"
+  "updatedAt": "2026-06-27T04:28:08.722Z"
 }

@@ -224,7 +224,7 @@ const ASSETS = [
     resize: "210x92",
     kind: "decoration",
     prompt:
-      `${BASE_STYLE} Small soft white cloud decoration, simple rounded semi-flat shape with very light blue shading. ${ALPHA_STYLE} ${NO_TEXT}`
+      `${BASE_STYLE} Isolated decoration only: one small soft white cloud shape, simple rounded semi-flat form with very light blue shading. The image must contain only the cloud, nothing else: no buildings, no people, no trees, no flag, no coins, no landscape, no skyline. ${ALPHA_STYLE} ${NO_TEXT}`
   },
   {
     id: "DE-02",
@@ -236,7 +236,7 @@ const ASSETS = [
     resize: "320x142",
     kind: "decoration",
     prompt:
-      `${BASE_STYLE} Medium soft white cloud decoration, simple rounded semi-flat shape with very light blue shading. ${ALPHA_STYLE} ${NO_TEXT}`
+      `${BASE_STYLE} Isolated decoration only: one medium soft white cloud shape, simple rounded semi-flat form with very light blue shading. The image must contain only the cloud, nothing else: no buildings, no people, no trees, no flag, no coins, no landscape, no skyline. ${ALPHA_STYLE} ${NO_TEXT}`
   },
   {
     id: "DE-03",
@@ -248,7 +248,7 @@ const ASSETS = [
     resize: "430x190",
     kind: "decoration",
     prompt:
-      `${BASE_STYLE} Large soft white cloud decoration, simple rounded semi-flat shape with very light blue shading. ${ALPHA_STYLE} ${NO_TEXT}`
+      `${BASE_STYLE} Isolated decoration only: one large soft white cloud shape, simple rounded semi-flat form with very light blue shading. The image must contain only the cloud, nothing else: no buildings, no people, no trees, no flag, no coins, no landscape, no skyline. ${ALPHA_STYLE} ${NO_TEXT}`
   },
   {
     id: "DE-04",
@@ -693,10 +693,14 @@ function runMagick(args) {
   execFileSync("magick", args, { cwd: ROOT, stdio: "inherit" });
 }
 
-function exportAsset(asset, manifest) {
+function exportAsset(asset, manifest, force = false) {
   const outPath = finalPath(asset);
   const inputPath = asset.alpha ? rembgPath(asset) : generatedPath(asset);
   if (!existsSync(inputPath)) throw new Error(`Missing input for export: ${rel(inputPath)}`);
+  if (!force && manifest.jobs[asset.filename]?.export?.localPath && existsSync(outPath)) {
+    console.log(`skip export ${asset.filename}`);
+    return;
+  }
   console.log(`export ${asset.filename}`);
   if (asset.alpha) {
     const resize = asset.resize || `${Math.round(asset.width * 0.88)}x${Math.round(asset.height * 0.88)}`;
@@ -819,7 +823,7 @@ async function main() {
     return;
   }
   if (command === "export") {
-    for (const asset of assets) exportAsset(asset, manifest);
+    for (const asset of assets) exportAsset(asset, manifest, force);
     return;
   }
   if (command === "sheet") {
@@ -835,7 +839,7 @@ async function main() {
     for (const asset of assets) {
       await generateAsset(asset, manifest, key, force);
       await removeBackground(asset, manifest, key, force);
-      exportAsset(asset, manifest);
+      exportAsset(asset, manifest, force);
     }
     makeSheet(ASSETS);
     validateAssets(ASSETS);

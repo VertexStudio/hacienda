@@ -155,6 +155,61 @@ Review contact sheet:
 design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-tests/contact-sheets/final-assets-contact-sheet.png
 ```
 
+## Production Batch Workflow
+
+Production Game 1 art is generated with:
+
+```sh
+node scripts/generate-game1-art.mjs all
+```
+
+Useful commands:
+
+```sh
+node scripts/generate-game1-art.mjs missing
+node scripts/generate-game1-art.mjs generate IC-02
+node scripts/generate-game1-art.mjs remove-bg IC-02
+node scripts/generate-game1-art.mjs export IC-02
+node scripts/generate-game1-art.mjs sheet
+node scripts/generate-game1-art.mjs validate
+```
+
+Use `--force` to regenerate or re-export a specific asset:
+
+```sh
+node scripts/generate-game1-art.mjs generate DE-01 --force
+node scripts/generate-game1-art.mjs remove-bg DE-01 --force
+node scripts/generate-game1-art.mjs export DE-01 --force
+```
+
+Production source files are stored under:
+
+```text
+design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-production/
+```
+
+Important files:
+
+- `manifest.json`: prompt, output URL, remover URL, and export metadata.
+- `generated/*.wavespeed.png`: raw gpt-image-2/edit results.
+- `background-removed/*.rembg.png`: Wavespeed background-remover outputs.
+- `contact-sheets/game1-final-assets-contact-sheet.png`: visual review sheet for the production batch.
+
+Final game exports are stored under:
+
+```text
+apps/arma-el-presupuesto-de-el-salvador/src/assets/art/
+```
+
+Production status:
+
+- All **39** `art-inventory.md` exports now exist in the final game asset folder.
+- All transparent PNG exports validated with real alpha:
+  - `alpha-min=0`
+  - `alpha-max=1`
+- All exports validated at the exact inventory dimensions.
+- The production batch was committed in category checkpoints so the manifest can be resumed safely.
+
 ## What Worked
 
 - The model accepted the Game 1 reference image when using the `media.githubusercontent.com` URL.
@@ -176,6 +231,12 @@ design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-tests/c
   - `character_guide_neutral_2x.png` is loaded and rendered in the assignment feedback panel.
 - `npm run build` bundled the imported PNG assets into the GitHub Pages output.
 - GitHub Pages PNG outputs are explicitly excluded from Git LFS in `.gitattributes` so the browser receives real images instead of LFS pointer files.
+- The production script can resume partial runs:
+  - Existing generation and background-removal jobs are skipped unless `--force` is provided.
+  - Existing final exports are skipped unless `--force` is provided.
+- Targeted prompt retries worked well for production misses:
+  - The flag prop became a clean standalone blue-white-blue flag after adding explicit "only the flag and pole" constraints.
+  - Cloud decorations became standalone clouds after adding explicit "only the cloud" constraints and negative lists.
 
 ## What Did Not Work Or Needs Care
 
@@ -191,6 +252,11 @@ design/games/01-arma-el-presupuesto-de-el-salvador/sources/art/wavespeed-tests/c
   - Production pipeline should treat background removal as a separate AI step instead of relying on the generation prompt.
 - The coin/cash prop came out more 3D/rendered than the reference board and included currency-like symbols on coins. For final prompts, explicitly request `semi-flat vector-like illustration`, `no letters`, `no currency symbols`, and `transparent background`.
 - Background remover fixes the alpha channel but does not resize, crop, or restyle the image. Use local tools only after removal for deterministic canvas fitting.
+- Broad style-board prompts can over-compose simple assets:
+  - The first flag retry produced a full civic mini-scene instead of a standalone flag.
+  - The first cloud pass produced civic mini-scenes instead of cloud decorations.
+  - For simple props/decorations, say `Isolated prop only` or `Isolated decoration only`, then list forbidden objects such as people, buildings, coins, flags, landscapes, charts, and UI.
+- The info-style UI/icon prompts may still produce a familiar lowercase `i` shape. That is acceptable for UI use, but do not rely on the model to avoid letter-like symbols unless the asset specifically needs a non-letter abstract mark.
 
 ## Prompt Guidance
 
