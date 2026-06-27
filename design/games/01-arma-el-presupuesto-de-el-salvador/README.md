@@ -8,4 +8,6 @@ Visual reference: `sources/reference/game-1-reference.png`.
 
 Style baseline: `style-guide.md`.
 
+Art production inventory: `art-inventory.md`.
+
 Implementation target: `apps/arma-el-presupuesto-de-el-salvador/`.
