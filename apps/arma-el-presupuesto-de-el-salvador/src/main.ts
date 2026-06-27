@@ -19,6 +19,21 @@ type Sector = {
   color: number;
 };
 
+type AssignmentRowView = {
+  fill: Phaser.GameObjects.Rectangle;
+  percentText: Phaser.GameObjects.Text;
+  thumb: Phaser.GameObjects.Arc;
+  sliderX: number;
+  sliderWidth: number;
+};
+
+type IndicatorView = {
+  totalText: Phaser.GameObjects.Text;
+  surplusText: Phaser.GameObjects.Text;
+  vaultFill: Phaser.GameObjects.Rectangle;
+  vaultText: Phaser.GameObjects.Text;
+};
+
 const sectors: Sector[] = [
   {
     id: "educacion",
@@ -147,8 +162,10 @@ const sectors: Sector[] = [
 class BudgetSimulatorScene extends Phaser.Scene {
   private screen: ScreenName = "intro";
   private allocations: Record<string, number> = {};
+  private assignmentRows = new Map<string, AssignmentRowView>();
   private infoCard?: Phaser.GameObjects.Container;
   private feedbackText?: Phaser.GameObjects.Text;
+  private indicatorView?: IndicatorView;
 
   constructor() {
     super("BudgetSimulatorScene");
@@ -226,7 +243,7 @@ class BudgetSimulatorScene extends Phaser.Scene {
 
     const feedback =
       message ??
-      "Selecciona un sector y ajusta su porcentaje. Cada decisión cambia el superávit disponible.";
+      "Arrastra o toca las barras para asignar presupuesto. Cada decisión cambia el superávit disponible.";
     this.add
       .rectangle(48, 705, 760, 72, 0xffffff, 0.92)
       .setOrigin(0)
@@ -239,6 +256,9 @@ class BudgetSimulatorScene extends Phaser.Scene {
     const rowHeight = 46;
     sectors.forEach((sector, index) => {
       const rowY = y + index * rowHeight;
+      const sliderX = x + 402;
+      const sliderWidth = 512;
+      const sliderY = rowY + 21;
       const fill = index % 2 === 0 ? 0xffffff : 0xf8faf6;
       this.add.rectangle(x, rowY, 1070, 40, fill).setOrigin(0).setStrokeStyle(1, 0xe3e8e4);
 
@@ -254,27 +274,18 @@ class BudgetSimulatorScene extends Phaser.Scene {
       name.on("pointerdown", () => this.showInfoCard(sector, x + 368, rowY - 16, true));
       this.add.rectangle(x + 50, rowY + 31, Math.min(name.width, 260), 2, 0x126a70, 0.22).setOrigin(0);
 
-      this.drawSmallBar(x + 376, rowY + 13, 300, this.allocations[sector.id], sector.color);
-      this.addText(x + 700, rowY + 9, `${this.allocations[sector.id]}%`, 20, "#17211f", 60, "bold");
-      this.addButton(x + 780, rowY + 4, 42, 32, "-", () => this.adjustSector(sector, -1), "plain");
-      this.addButton(x + 832, rowY + 4, 42, 32, "+", () => this.adjustSector(sector, 1), "plain");
-      this.addText(x + 908, rowY + 11, `Real 2025: ${sector.realPercent.toFixed(1)}%`, 15, "#51605c", 150);
+      this.drawSlider(sector, sliderX, sliderY, sliderWidth);
+      const percentText = this.addText(x + 948, rowY + 9, "0%", 20, "#17211f", 70, "bold");
+      this.assignmentRows.set(sector.id, {
+        fill: this.children.getByName(`fill-${sector.id}`) as Phaser.GameObjects.Rectangle,
+        percentText,
+        thumb: this.children.getByName(`thumb-${sector.id}`) as Phaser.GameObjects.Arc,
+        sliderX,
+        sliderWidth
+      });
     });
-  }
 
-  private adjustSector(sector: Sector, delta: number) {
-    const current = this.allocations[sector.id];
-    if (delta > 0 && this.surplus() <= 0) {
-      this.renderAssignment("No puedes asignar más presupuesto porque ya no queda superávit disponible.");
-      return;
-    }
-    if (delta < 0 && current <= 0) {
-      this.renderAssignment("Ese sector ya está en 0%. Puedes aumentar otra área o avanzar al resultado.");
-      return;
-    }
-
-    this.allocations[sector.id] = Phaser.Math.Clamp(current + delta, 0, 100);
-    this.renderAssignment(sector.feedback);
+    this.updateAssignmentViews();
   }
 
   private renderBridge() {
@@ -425,15 +436,29 @@ class BudgetSimulatorScene extends Phaser.Scene {
   private drawIndicators(x: number, y: number) {
     const total = this.totalAssigned();
     const surplus = this.surplus();
-    this.drawInfoPanel(x, y, 300, 86, "Total asignado", [`${total}% de 100%`]);
-    this.drawInfoPanel(x + 326, y, 336, 86, "Superávit disponible", [`${surplus}% de dinero no asignado`]);
+    this.add
+      .rectangle(x, y, 300, 86, 0xffffff, 0.94)
+      .setOrigin(0)
+      .setStrokeStyle(1, 0xd7ded8);
+    this.addText(x + 18, y + 14, "Total asignado", 20, "#17211f", 264, "bold");
+    const totalText = this.addText(x + 18, y + 50, `${total}% de 100%`, 17, "#364340", 264);
+
+    this.add
+      .rectangle(x + 326, y, 336, 86, 0xffffff, 0.94)
+      .setOrigin(0)
+      .setStrokeStyle(1, 0xd7ded8);
+    this.addText(x + 344, y + 14, "Superávit disponible", 20, "#17211f", 300, "bold");
+    const surplusText = this.addText(x + 344, y + 50, `${surplus}% de dinero no asignado`, 17, "#364340", 300);
+
     this.add
       .rectangle(x + 690, y, 380, 86, 0xffffff, 0.94)
       .setOrigin(0)
       .setStrokeStyle(1, 0xd7ded8);
     this.addText(x + 712, y + 14, "Bóveda de recursos", 17, "#17211f", 220, "bold");
-    this.drawBar(x + 712, y + 50, 250, 18, surplus / 100, 0xf5cc61);
-    this.addText(x + 978, y + 43, `${surplus}%`, 22, "#17211f", 80, "bold");
+    this.add.rectangle(x + 712, y + 50, 250, 18, 0xe9eee9).setOrigin(0);
+    const vaultFill = this.add.rectangle(x + 712, y + 50, 250, 18, 0xf5cc61).setOrigin(0);
+    const vaultText = this.addText(x + 978, y + 43, `${surplus}%`, 22, "#17211f", 80, "bold");
+    this.indicatorView = { totalText, surplusText, vaultFill, vaultText };
   }
 
   private drawHeader(title: string, subtitle: string) {
@@ -467,8 +492,44 @@ class BudgetSimulatorScene extends Phaser.Scene {
     this.addText(x + 34, y + 124, "Recursos limitados", 15, "#51605c", 180);
   }
 
-  private drawSmallBar(x: number, y: number, width: number, percent: number, color: number) {
-    this.drawBar(x, y, width, 14, percent / 100, color);
+  private drawSlider(sector: Sector, x: number, y: number, width: number) {
+    const track = this.add.rectangle(x, y - 5, width, 10, 0xe9eee9).setOrigin(0);
+    this.add.circle(x, y, 5, 0xe9eee9);
+    this.add.circle(x + width, y, 5, 0xe9eee9);
+
+    const fill = this.add
+      .rectangle(x, y - 5, 1, 10, sector.color)
+      .setOrigin(0)
+      .setName(`fill-${sector.id}`)
+      .setVisible(false);
+    const thumb = this.add
+      .circle(x, y, 14, 0xffffff)
+      .setStrokeStyle(4, sector.color)
+      .setName(`thumb-${sector.id}`);
+    const hitArea = this.add
+      .rectangle(x, y - 19, width, 38, 0xffffff, 0.001)
+      .setOrigin(0)
+      .setInteractive({ useHandCursor: true });
+
+    this.input.setDraggable(hitArea);
+    track.setInteractive({ useHandCursor: true });
+    track.on("pointerdown", (pointer: Phaser.Input.Pointer) => {
+      this.setSectorFromPointer(sector, pointer, x, width);
+    });
+    hitArea.on("pointerdown", (pointer: Phaser.Input.Pointer) => {
+      this.setSectorFromPointer(sector, pointer, x, width);
+    });
+    hitArea.on("drag", (pointer: Phaser.Input.Pointer) => {
+      this.setSectorFromPointer(sector, pointer, x, width);
+    });
+    thumb.setInteractive({ useHandCursor: true });
+    this.input.setDraggable(thumb);
+    thumb.on("drag", (pointer: Phaser.Input.Pointer) => {
+      this.setSectorFromPointer(sector, pointer, x, width);
+    });
+    thumb.on("pointerdown", (pointer: Phaser.Input.Pointer) => {
+      this.setSectorFromPointer(sector, pointer, x, width);
+    });
   }
 
   private drawBar(x: number, y: number, width: number, height: number, progress: number, color: number) {
@@ -516,8 +577,7 @@ class BudgetSimulatorScene extends Phaser.Scene {
     const rect = this.add
       .rectangle(0, 0, width, height, colors.fill)
       .setOrigin(0)
-      .setStrokeStyle(1, colors.stroke)
-      .setInteractive({ useHandCursor: true });
+      .setStrokeStyle(1, colors.stroke);
     const text = this.add
       .text(width / 2, height / 2, label, {
         color: colors.text,
@@ -531,9 +591,14 @@ class BudgetSimulatorScene extends Phaser.Scene {
 
     container.add([rect, text]);
     container.setSize(width, height);
-    rect.on("pointerover", () => rect.setFillStyle(variant === "primary" ? 0xffd96f : 0xf0f5ef));
-    rect.on("pointerout", () => rect.setFillStyle(colors.fill));
-    rect.on("pointerdown", onClick);
+    container.setInteractive({
+      hitArea: new Phaser.Geom.Rectangle(0, 0, width, height),
+      hitAreaCallback: Phaser.Geom.Rectangle.Contains,
+      useHandCursor: true
+    });
+    container.on("pointerover", () => rect.setFillStyle(variant === "primary" ? 0xffd96f : 0xf0f5ef));
+    container.on("pointerout", () => rect.setFillStyle(colors.fill));
+    container.on("pointerdown", onClick);
     return container;
   }
 
@@ -558,7 +623,64 @@ class BudgetSimulatorScene extends Phaser.Scene {
 
   private clearScreen() {
     this.hideInfoCard();
+    this.assignmentRows.clear();
+    this.indicatorView = undefined;
     this.children.removeAll(true);
+  }
+
+  private setSectorFromPointer(
+    sector: Sector,
+    pointer: Phaser.Input.Pointer,
+    sliderX: number,
+    sliderWidth: number
+  ) {
+    const requested = Math.round(
+      Phaser.Math.Clamp(((pointer.x - sliderX) / sliderWidth) * 100, 0, 100)
+    );
+    const current = this.allocations[sector.id];
+    const maxAllowed = current + this.surplus();
+    const next = Phaser.Math.Clamp(requested, 0, maxAllowed);
+
+    if (next === current && requested > maxAllowed) {
+      this.feedbackText?.setText(
+        "No puedes asignar más presupuesto porque ya no queda superávit disponible."
+      );
+      return;
+    }
+
+    if (next === current) {
+      return;
+    }
+
+    this.allocations[sector.id] = next;
+    this.updateAssignmentViews(sector.feedback);
+  }
+
+  private updateAssignmentViews(feedback?: string) {
+    const total = this.totalAssigned();
+    const surplus = this.surplus();
+
+    this.indicatorView?.totalText.setText(`${total}% de 100%`);
+    this.indicatorView?.surplusText.setText(`${surplus}% de dinero no asignado`);
+    this.indicatorView?.vaultText.setText(`${surplus}%`);
+    if (this.indicatorView) {
+      const fillWidth = 250 * (surplus / 100);
+      this.indicatorView.vaultFill.setVisible(fillWidth > 0);
+      this.indicatorView.vaultFill.displayWidth = Math.max(fillWidth, 1);
+    }
+
+    this.assignmentRows.forEach((view, sectorId) => {
+      const percent = this.allocations[sectorId];
+      const fillWidth = view.sliderWidth * (percent / 100);
+      view.fill.setVisible(fillWidth > 0);
+      view.fill.displayWidth = Math.max(fillWidth, 1);
+      view.thumb.x = view.sliderX + fillWidth;
+      view.percentText.setText(`${percent}%`);
+    });
+
+    if (feedback) {
+      this.feedbackText?.setText(feedback);
+    }
   }
 }
 
