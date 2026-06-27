@@ -231,6 +231,12 @@ Production status:
   - `character_guide_neutral_2x.png` is loaded and rendered in the assignment feedback panel.
 - `npm run build` bundled the imported PNG assets into the GitHub Pages output.
 - GitHub Pages PNG outputs are explicitly excluded from Git LFS in `.gitattributes` so the browser receives real images instead of LFS pointer files.
+- GitHub Pages WebP outputs also need the same `.gitattributes` exclusion. The full production set includes WebP backgrounds, so `/arma-el-presupuesto-de-el-salvador/assets/*.webp` must stay outside LFS.
+- The full production set is now integrated into the Phaser/Vite game through an `import.meta.glob` art manifest:
+  - Sector rows and comparison charts use generated sector icons.
+  - Intro uses generated background, hero scene, flag, vault, government building, and UI star/chevron art.
+  - Assignment uses guide expressions, support art, vault/coins, and generated UI icons.
+  - Bridge/comparison screens use generated characters, piggy bank, trophy, and results art.
 - The production script can resume partial runs:
   - Existing generation and background-removal jobs are skipped unless `--force` is provided.
   - Existing final exports are skipped unless `--force` is provided.

@@ -1,8 +1,5 @@
 import Phaser from "phaser";
 import "./styles.css";
-import guideAvatarUrl from "./assets/art/character_guide_neutral_2x.png";
-import educationIconUrl from "./assets/art/icon_sector_education_2x.png";
-import coinCashStackUrl from "./assets/art/prop_coin_cash_stack_2x.png";
 
 const WIDTH = 1180;
 const HEIGHT = 820;
@@ -41,18 +38,67 @@ const TEXT = {
   soft: "#6F8094"
 };
 
-const IMAGE_KEYS = {
-  guideAvatar: "character-guide-neutral",
-  educationIcon: "icon-sector-education",
-  coinCashStack: "prop-coin-cash-stack"
+const ART = {
+  bgGameShell: "bg_game_shell_2x.webp",
+  bgSkylineOverlay: "bg_skyline_overlay_2x.png",
+  sceneIntroHero: "scene_intro_budget_hero_2x.webp",
+  sceneAssignmentPanel: "scene_assignment_side_panel_2x.png",
+  sceneResultsSuccess: "scene_results_success_2x.png",
+  studentNotebook: "character_student_notebook_full_2x.png",
+  studentHoodie: "character_student_hoodie_full_2x.png",
+  studentGlasses: "character_student_glasses_full_2x.png",
+  guideNeutral: "character_guide_neutral_2x.png",
+  guideHappy: "character_guide_happy_2x.png",
+  guideThinking: "character_guide_thinking_2x.png",
+  governmentBuilding: "prop_government_building_2x.png",
+  elSalvadorFlag: "prop_el_salvador_flag_2x.png",
+  coinCashStack: "prop_coin_cash_stack_2x.png",
+  vaultCoins: "prop_vault_coins_2x.png",
+  piggyBank: "prop_piggy_bank_2x.png",
+  trophy: "prop_trophy_2x.png",
+  infoBadge: "prop_info_badge_2x.png",
+  cloudSmall: "deco_cloud_small_2x.png",
+  cloudMedium: "deco_cloud_medium_2x.png",
+  cloudLarge: "deco_cloud_large_2x.png",
+  tree: "deco_tree_2x.png",
+  bushFlowers: "deco_bush_flowers_2x.png",
+  mountainCity: "deco_mountain_city_2x.png",
+  iconEducation: "icon_sector_education_2x.png",
+  iconHealth: "icon_sector_health_2x.png",
+  iconSecurity: "icon_sector_security_2x.png",
+  iconDefense: "icon_sector_defense_2x.png",
+  iconInfrastructure: "icon_sector_infrastructure_2x.png",
+  iconSocialPrograms: "icon_sector_social_programs_2x.png",
+  iconAdministration: "icon_sector_administration_2x.png",
+  iconTransfers: "icon_sector_transfers_2x.png",
+  iconDebt: "icon_sector_debt_2x.png",
+  iconLegislativeJudicial: "icon_sector_legislative_judicial_2x.png",
+  uiChevronRight: "ui_icon_chevron_right_2x.png",
+  uiRestart: "ui_icon_restart_2x.png",
+  uiInfo: "ui_icon_info_2x.png",
+  uiLightbulb: "ui_icon_lightbulb_2x.png",
+  uiStar: "ui_icon_star_2x.png"
 };
+
+type ArtKey = keyof typeof ART;
+
+const ART_URLS = import.meta.glob("./assets/art/*", {
+  eager: true,
+  import: "default"
+}) as Record<string, string>;
+
+function artUrl(filename: string) {
+  const url = ART_URLS[`./assets/art/${filename}`];
+  if (!url) throw new Error(`Missing art asset: ${filename}`);
+  return url;
+}
 
 type ScreenName = "intro" | "assignment" | "bridge" | "comparison";
 
 type Sector = {
   id: string;
   name: string;
-  icon: string;
+  iconKey: ArtKey;
   official: string;
   citizen: string;
   feedback: string;
@@ -73,13 +119,14 @@ type IndicatorView = {
   surplusText: Phaser.GameObjects.Text;
   vaultFill: Phaser.GameObjects.Rectangle;
   vaultText: Phaser.GameObjects.Text;
+  vaultWidth: number;
 };
 
 const sectors: Sector[] = [
   {
     id: "educacion",
     name: "Educación",
-    icon: "📘",
+    iconKey: "iconEducation",
     official: "Ministerio de Educación, Ciencia y Tecnología",
     citizen:
       "Recursos para escuelas, formación docente, materiales educativos y oportunidades de aprendizaje.",
@@ -91,7 +138,7 @@ const sectors: Sector[] = [
   {
     id: "salud",
     name: "Salud",
-    icon: "♥",
+    iconKey: "iconHealth",
     official: "Ministerio de Salud",
     citizen:
       "Recursos para hospitales, medicamentos, prevención y atención médica a la población.",
@@ -103,7 +150,7 @@ const sectors: Sector[] = [
   {
     id: "seguridad",
     name: "Seguridad Pública",
-    icon: "⬟",
+    iconKey: "iconSecurity",
     official: "Ministerio de Justicia y Seguridad Pública",
     citizen:
       "Recursos para prevención del delito, seguridad ciudadana y funcionamiento de instituciones de justicia y seguridad.",
@@ -115,7 +162,7 @@ const sectors: Sector[] = [
   {
     id: "defensa",
     name: "Defensa Nacional",
-    icon: "♟",
+    iconKey: "iconDefense",
     official: "Ministerio de la Defensa Nacional",
     citizen:
       "Recursos para proteger la soberanía, apoyar emergencias y mantener capacidades de defensa del país.",
@@ -127,7 +174,7 @@ const sectors: Sector[] = [
   {
     id: "infraestructura",
     name: "Infraestructura y transporte",
-    icon: "⚒",
+    iconKey: "iconInfrastructure",
     official: "Ministerio de Obras Públicas y de Transporte",
     citizen:
       "Recursos para carreteras, transporte, obras públicas y mantenimiento de infraestructura.",
@@ -139,7 +186,7 @@ const sectors: Sector[] = [
   {
     id: "programas",
     name: "Programas sociales y desarrollo",
-    icon: "●●",
+    iconKey: "iconSocialPrograms",
     official:
       "Ministerios de Trabajo, Cultura, Vivienda, Desarrollo Local, Economía, Agricultura, Medio Ambiente, Turismo y Gobernación.",
     citizen:
@@ -152,7 +199,7 @@ const sectors: Sector[] = [
   {
     id: "administracion",
     name: "Administración del Estado",
-    icon: "⚙",
+    iconKey: "iconAdministration",
     official:
       "Presidencia de la República, Ministerio de Hacienda, Relaciones Exteriores, Ministerio Público y otras instituciones.",
     citizen:
@@ -165,7 +212,7 @@ const sectors: Sector[] = [
   {
     id: "transferencias",
     name: "Transferencias y obligaciones",
-    icon: "↔",
+    iconKey: "iconTransfers",
     official: "Obligaciones Generales del Estado; Transferencias Varias",
     citizen:
       "Recursos que el Estado entrega a otras instituciones o compromisos que debe cumplir por ley.",
@@ -177,7 +224,7 @@ const sectors: Sector[] = [
   {
     id: "deuda",
     name: "Pago de deuda",
-    icon: "$",
+    iconKey: "iconDebt",
     official: "Pago de deuda pública: intereses y principal",
     citizen:
       "Dinero destinado a pagar préstamos anteriores. Si no se paga ahora, se deberá pagar en próximos años y con intereses.",
@@ -189,7 +236,7 @@ const sectors: Sector[] = [
   {
     id: "organos",
     name: "Órganos Legislativo y Judicial",
-    icon: "⚖",
+    iconKey: "iconLegislativeJudicial",
     official: "Órgano Legislativo y Órgano Judicial",
     citizen:
       "Instituciones encargadas de elaborar leyes, resolver conflictos y administrar justicia.",
@@ -206,6 +253,7 @@ class BudgetSimulatorScene extends Phaser.Scene {
   private assignmentRows = new Map<string, AssignmentRowView>();
   private infoCard?: Phaser.GameObjects.Container;
   private feedbackText?: Phaser.GameObjects.Text;
+  private feedbackGuide?: Phaser.GameObjects.Image;
   private indicatorView?: IndicatorView;
 
   constructor() {
@@ -213,9 +261,9 @@ class BudgetSimulatorScene extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image(IMAGE_KEYS.guideAvatar, guideAvatarUrl);
-    this.load.image(IMAGE_KEYS.educationIcon, educationIconUrl);
-    this.load.image(IMAGE_KEYS.coinCashStack, coinCashStackUrl);
+    Object.entries(ART).forEach(([key, filename]) => {
+      this.load.image(key, artUrl(filename));
+    });
   }
 
   create() {
@@ -268,14 +316,12 @@ class BudgetSimulatorScene extends Phaser.Scene {
     );
 
     this.drawIntroHeroArt(560, 116);
-    this.drawInfoPanel(782, 118, 292, 212, "Presupuesto 2025", [
-      "Presupuesto del Estado de El Salvador",
-      "Total: 9,663 millones de dólares",
-      "Tu misión: repartir 100% sin generar déficit."
-    ]);
+    this.drawIntroBudgetPanel(560, 594);
+    this.add.image(486, 578, "governmentBuilding").setDisplaySize(126, 82);
 
-    this.addButton(68, 628, 260, 62, "Comenzar  ›", () => this.renderAssignment(), "primary");
-    this.addText(70, 706, "★ Aprende jugando, decide con responsabilidad.", 13, TEXT.muted, 360);
+    this.addButton(68, 628, 260, 62, "Comenzar", () => this.renderAssignment(), "primary", "uiChevronRight");
+    this.add.image(80, 714, "uiStar").setDisplaySize(18, 18);
+    this.addText(104, 706, "Aprende jugando, decide con responsabilidad.", 13, TEXT.muted, 340);
   }
 
   private renderAssignment(message?: string) {
@@ -294,10 +340,12 @@ class BudgetSimulatorScene extends Phaser.Scene {
       message ??
       "Arrastra o toca las barras para asignar presupuesto. Cada decisión cambia el superávit disponible.";
     this.addPanel(48, 692, 760, 86, COLORS.panel, COLORS.line, 0.96, 8);
-    this.add.image(86, 735, IMAGE_KEYS.guideAvatar).setDisplaySize(62, 62);
-    this.addText(128, 706, "Traductor ciudadano", 13, TEXT.teal, 240, "bold");
+    this.feedbackGuide = this.add.image(86, 735, "guideNeutral").setDisplaySize(62, 62);
+    this.add.image(122, 714, "uiLightbulb").setDisplaySize(20, 20);
+    this.addText(148, 706, "Traductor ciudadano", 13, TEXT.teal, 240, "bold");
     this.feedbackText = this.addText(128, 728, feedback, 16, TEXT.muted, 650);
-    this.addButton(850, 704, 270, 60, "Ver mi presupuesto", () => this.renderBridge(), "primary");
+    this.add.image(750, 735, "sceneAssignmentPanel").setDisplaySize(72, 84).setAlpha(0.95);
+    this.addButton(850, 704, 270, 60, "Ver mi presupuesto", () => this.renderBridge(), "primary", "uiChevronRight");
   }
 
   private drawAssignmentRows(x: number, y: number) {
@@ -349,8 +397,12 @@ class BudgetSimulatorScene extends Phaser.Scene {
       "Observa dónde asignaste más recursos y dónde asignaste menos.",
       "No hay una respuesta única: el objetivo es reflexionar sobre decisiones difíciles."
     ]);
+    this.add.image(118, 620, "studentNotebook").setDisplaySize(104, 156);
+    this.add.image(84, 430, "studentGlasses").setDisplaySize(90, 135);
+    this.add.image(1050, 618, "studentHoodie").setDisplaySize(104, 156);
+    this.add.image(938, 424, "piggyBank").setDisplaySize(72, 72);
 
-    this.addButton(262, 610, 300, 60, "Volver a ajustar", () => this.renderAssignment(), "secondary");
+    this.addButton(262, 610, 300, 60, "Volver a ajustar", () => this.renderAssignment(), "secondary", "uiRestart");
     this.addButton(
       596,
       610,
@@ -358,7 +410,8 @@ class BudgetSimulatorScene extends Phaser.Scene {
       60,
       "Comparar con el presupuesto real",
       () => this.renderComparison(),
-      "primary"
+      "primary",
+      "uiChevronRight"
     );
   }
 
@@ -374,14 +427,15 @@ class BudgetSimulatorScene extends Phaser.Scene {
     this.drawComparisonChart(48, 168);
     this.drawComparisonTable(724, 126);
     this.drawAnalysis(48, 612);
+    this.add.image(1070, 80, "trophy").setDisplaySize(68, 68);
 
     this.addButton(48, 744, 240, 52, "Intentar nuevamente", () => {
       this.resetAllocations();
       this.renderIntro();
-    }, "secondary");
+    }, "secondary", "uiRestart");
     this.addButton(314, 744, 350, 52, "Ir a la guía ciudadana 2025", () => {
       window.open(GUIDE_URL, "_blank", "noopener,noreferrer");
-    }, "primary");
+    }, "primary", "uiChevronRight");
     this.addButton(690, 744, 190, 52, "Finalizar", () => this.renderIntro(), "plain");
   }
 
@@ -460,8 +514,9 @@ class BudgetSimulatorScene extends Phaser.Scene {
     this.addText(x + 20, y + 44, surplusMessage, 15, TEXT.muted, 500);
     const overSummary = over.length ? `${over.length} sectores. Revisa la tabla para ver cuáles.` : "ningún sector.";
     const underSummary = under.length ? `${under.length} sectores. Revisa la tabla para ver cuáles.` : "ningún sector.";
-    this.addText(x + 560, y + 18, `Más que el presupuesto real: ${overSummary}`, 14, TEXT.muted, 490);
-    this.addText(x + 560, y + 62, `Menos que el presupuesto real: ${underSummary}`, 14, TEXT.muted, 490);
+    this.addText(x + 560, y + 18, `Más que el presupuesto real: ${overSummary}`, 14, TEXT.muted, 330);
+    this.addText(x + 560, y + 62, `Menos que el presupuesto real: ${underSummary}`, 14, TEXT.muted, 330);
+    this.add.image(x + 994, y + 58, "sceneResultsSuccess").setDisplaySize(126, 108);
   }
 
   private drawIndicators(x: number, y: number) {
@@ -470,17 +525,20 @@ class BudgetSimulatorScene extends Phaser.Scene {
     this.addPanel(x, y, 300, 86, COLORS.panel, COLORS.line, 0.96, 8);
     this.addText(x + 18, y + 14, "Presupuesto total", 16, TEXT.soft, 264, "bold");
     const totalText = this.addText(x + 18, y + 42, "100%", 22, TEXT.blue, 264, "bold");
+    this.add.image(x + 258, y + 48, "coinCashStack").setDisplaySize(64, 48);
 
     this.addPanel(x + 326, y, 336, 86, COLORS.panel, COLORS.line, 0.96, 8);
     this.addText(x + 344, y + 14, "Asignado", 16, TEXT.soft, 300, "bold");
     const surplusText = this.addText(x + 344, y + 42, `${total}% asignado`, 22, TEXT.teal, 300, "bold");
 
+    const vaultWidth = 206;
     this.addPanel(x + 690, y, 380, 86, COLORS.panel, COLORS.line, 0.96, 8);
     this.addText(x + 712, y + 14, "Bóveda de recursos", 16, TEXT.soft, 220, "bold");
-    this.add.rectangle(x + 712, y + 52, 250, 16, COLORS.lightGray).setOrigin(0);
-    const vaultFill = this.add.rectangle(x + 712, y + 52, 250, 16, COLORS.green).setOrigin(0);
-    const vaultText = this.addText(x + 978, y + 41, `${surplus}%`, 24, TEXT.green, 80, "bold");
-    this.indicatorView = { totalText, surplusText, vaultFill, vaultText };
+    this.add.rectangle(x + 712, y + 52, vaultWidth, 16, COLORS.lightGray).setOrigin(0);
+    const vaultFill = this.add.rectangle(x + 712, y + 52, vaultWidth, 16, COLORS.green).setOrigin(0);
+    const vaultText = this.addText(x + 934, y + 41, `${surplus}%`, 24, TEXT.green, 64, "bold");
+    this.add.image(x + 1040, y + 46, "vaultCoins").setDisplaySize(58, 58);
+    this.indicatorView = { totalText, surplusText, vaultFill, vaultText, vaultWidth };
   }
 
   private drawHeader(title: string, subtitle: string) {
@@ -490,21 +548,35 @@ class BudgetSimulatorScene extends Phaser.Scene {
   }
 
   private drawBackground() {
-    this.add.rectangle(0, 0, WIDTH, HEIGHT, COLORS.background).setOrigin(0);
-    this.add.circle(170, 48, 170, COLORS.sky, 0.1);
-    this.add.circle(1010, 30, 126, COLORS.sky, 0.11);
-    this.drawCloud(922, 70, 0.7);
-    this.drawCloud(1018, 48, 0.56);
-    this.drawDistantSkyline(790, 70);
-    this.addPanel(34, 24, WIDTH - 68, HEIGHT - 48, COLORS.panel, COLORS.line, 0.78, 8, false);
+    this.add.image(WIDTH / 2, HEIGHT / 2, "bgGameShell").setDisplaySize(WIDTH, HEIGHT);
+    this.add.rectangle(0, 0, WIDTH, HEIGHT, 0xf7fafc, 0.36).setOrigin(0);
+    this.add.image(976, 72, "bgSkylineOverlay").setDisplaySize(520, 80).setAlpha(0.52);
+    this.add.image(494, 58, "cloudLarge").setDisplaySize(188, 94).setAlpha(0.62);
+    this.add.image(124, 76, "cloudMedium").setDisplaySize(156, 78).setAlpha(0.82);
+    this.add.image(1016, 52, "cloudSmall").setDisplaySize(104, 52).setAlpha(0.82);
+    this.add.image(900, 760, "mountainCity").setDisplaySize(390, 118).setAlpha(0.26);
+    this.add.image(120, 754, "bushFlowers").setDisplaySize(210, 105).setAlpha(0.34);
+    this.add.image(1102, 752, "tree").setDisplaySize(116, 116).setAlpha(0.36);
+    this.addPanel(34, 24, WIDTH - 68, HEIGHT - 48, COLORS.panel, COLORS.line, 0.82, 8, false);
   }
 
   private drawInfoPanel(x: number, y: number, width: number, height: number, title: string, lines: string[]) {
     this.addPanel(x, y, width, height, COLORS.panel, COLORS.line, 0.96, 8);
+    this.add.image(x + width - 28, y + 28, "uiInfo").setDisplaySize(22, 22);
     this.addText(x + 18, y + 14, title, 19, TEXT.blue, width - 36, "bold");
     lines.forEach((line, index) => {
       this.addText(x + 18, y + 50 + index * 42, line, 15, TEXT.muted, width - 36);
     });
+  }
+
+  private drawIntroBudgetPanel(x: number, y: number) {
+    this.addPanel(x, y, 482, 96, COLORS.panel, COLORS.line, 0.96, 8);
+    this.add.image(x + 42, y + 48, "elSalvadorFlag").setDisplaySize(64, 48);
+    this.addText(x + 86, y + 16, "Presupuesto 2025", 18, TEXT.blue, 180, "bold");
+    this.addText(x + 86, y + 44, "Total: 9,663 millones de dólares", 15, TEXT.muted, 230);
+    this.add.image(x + 334, y + 48, "vaultCoins").setDisplaySize(50, 50);
+    this.addText(x + 372, y + 18, "100%", 24, TEXT.teal, 86, "bold");
+    this.addText(x + 372, y + 52, "sin déficit", 13, TEXT.muted, 86);
   }
 
   private addSectionPill(x: number, y: number, label: string) {
@@ -517,12 +589,7 @@ class BudgetSimulatorScene extends Phaser.Scene {
 
   private drawSectorIcon(x: number, y: number, sector: Sector, radius: number) {
     this.add.circle(x, y, radius, COLORS.panel).setStrokeStyle(2, sector.color);
-    if (sector.id === "educacion") {
-      this.add.image(x, y, IMAGE_KEYS.educationIcon).setDisplaySize(radius * 2.15, radius * 2.15);
-      return;
-    }
-    const size = radius <= 11 ? 11 : 15;
-    this.addText(x - radius + 3, y - size / 1.45, sector.icon, size, this.colorHex(sector.color), radius * 2, "bold");
+    this.add.image(x, y, sector.iconKey).setDisplaySize(radius * 2.2, radius * 2.2);
   }
 
   private addPanel(
@@ -550,31 +617,9 @@ class BudgetSimulatorScene extends Phaser.Scene {
 
   private drawIntroHeroArt(x: number, y: number) {
     this.addPanel(x, y, 482, 456, COLORS.panel, COLORS.line, 0.98, 8);
-    const g = this.add.graphics();
-
-    g.fillStyle(0xdff5ff, 1);
-    g.fillRoundedRect(x + 18, y + 18, 446, 282, 8);
-    g.fillStyle(0xb9ddff, 1);
-    g.fillTriangle(x + 40, y + 196, x + 178, y + 58, x + 312, y + 196);
-    g.fillStyle(0xd2eafe, 1);
-    g.fillTriangle(x + 174, y + 198, x + 328, y + 74, x + 462, y + 198);
-    g.fillStyle(0x7bbd57, 1);
-    g.fillRoundedRect(x + 18, y + 220, 446, 80, 0);
-    g.fillStyle(0x5aa340, 1);
-    g.fillRoundedRect(x + 18, y + 262, 446, 38, 0);
-
-    this.drawCloud(x + 72, y + 76, 0.55);
-    this.drawCloud(x + 360, y + 62, 0.45);
-    this.drawGovernmentBuilding(x + 190, y + 116);
-    this.drawFlag(x + 282, y + 91);
-    this.drawTree(x + 78, y + 214, 0.82);
-    this.drawTree(x + 404, y + 212, 0.72);
-    this.add.image(x + 388, y + 344, IMAGE_KEYS.coinCashStack).setDisplaySize(128, 96);
-    this.drawStudent(x + 105, y + 324, COLORS.yellow, 0x4a2d1a);
-    this.drawStudent(x + 210, y + 316, COLORS.teal, 0x162436);
-    this.drawStudent(x + 314, y + 324, COLORS.coral, 0x2d1b14);
-
-    this.addText(x + 30, y + 408, "★ Aprende · Decide · Construye el país", 14, TEXT.blue, 360, "bold");
+    this.add.image(x + 241, y + 228, "sceneIntroHero").setDisplaySize(452, 428);
+    this.add.image(x + 46, y + 414, "uiStar").setDisplaySize(18, 18);
+    this.addText(x + 70, y + 404, "Aprende · Decide · Construye el país", 14, TEXT.blue, 340, "bold");
   }
 
   private drawCloud(x: number, y: number, scale: number) {
@@ -712,6 +757,7 @@ class BudgetSimulatorScene extends Phaser.Scene {
     bg.lineStyle(2, sector.color, 1);
     bg.strokeRoundedRect(0, 0, 360, 190, 8);
     card.add(bg);
+    card.add(this.add.image(326, 32, "infoBadge").setDisplaySize(34, 34));
     card.add(this.addText(16, 14, sector.name, 20, TEXT.blue, 300, "bold"));
     card.add(this.addText(16, 48, sector.official, 15, TEXT.muted, 326));
     card.add(this.addText(16, 112, sector.citizen, 14, TEXT.soft, 326));
@@ -734,7 +780,8 @@ class BudgetSimulatorScene extends Phaser.Scene {
     height: number,
     label: string,
     onClick: () => void,
-    variant: "primary" | "secondary" | "plain"
+    variant: "primary" | "secondary" | "plain",
+    iconKey?: ArtKey
   ) {
     const colors = {
       primary: { fill: COLORS.blue, hover: COLORS.blueHover, stroke: COLORS.blue, text: "#FFFFFF" },
@@ -754,23 +801,31 @@ class BudgetSimulatorScene extends Phaser.Scene {
       shape.strokeRoundedRect(0, 0, width, height, 8);
     };
     drawShape(colors.fill);
+    const textX = iconKey ? width / 2 - 10 : width / 2;
+    const wrapWidth = width - (iconKey ? 62 : 18);
     const text = this.add
-      .text(width / 2, height / 2, label, {
+      .text(textX, height / 2, label, {
         color: colors.text,
         fontFamily: "Inter, system-ui, sans-serif",
         fontSize: height <= 34 ? "20px" : "19px",
         fontStyle: "bold",
         align: "center",
-        wordWrap: { width: width - 18 }
+        wordWrap: { width: wrapWidth }
       })
       .setOrigin(0.5);
+    const icon = iconKey
+      ? this.add
+          .image(width - 30, height / 2, iconKey)
+          .setDisplaySize(height <= 36 ? 18 : 22, height <= 36 ? 18 : 22)
+      : undefined;
+    if (icon && variant === "primary") icon.setTint(0xffffff);
 
     const hitArea = this.add
       .rectangle(0, 0, width, height, 0xffffff, 0.001)
       .setOrigin(0)
       .setInteractive({ useHandCursor: true });
 
-    container.add([shape, text, hitArea]);
+    container.add(icon ? [shape, text, icon, hitArea] : [shape, text, hitArea]);
     container.setSize(width, height);
     hitArea.on("pointerover", () => drawShape(colors.hover));
     hitArea.on("pointerout", () => drawShape(colors.fill));
@@ -804,6 +859,7 @@ class BudgetSimulatorScene extends Phaser.Scene {
   private clearScreen() {
     this.hideInfoCard();
     this.assignmentRows.clear();
+    this.feedbackGuide = undefined;
     this.indicatorView = undefined;
     this.children.removeAll(true);
   }
@@ -844,7 +900,7 @@ class BudgetSimulatorScene extends Phaser.Scene {
     this.indicatorView?.surplusText.setText(`${total}% asignado`);
     this.indicatorView?.vaultText.setText(`${surplus}%`);
     if (this.indicatorView) {
-      const fillWidth = 250 * (surplus / 100);
+      const fillWidth = this.indicatorView.vaultWidth * (surplus / 100);
       this.indicatorView.vaultFill.setVisible(fillWidth > 0);
       this.indicatorView.vaultFill.displayWidth = Math.max(fillWidth, 1);
     }
@@ -860,6 +916,7 @@ class BudgetSimulatorScene extends Phaser.Scene {
 
     if (feedback) {
       this.feedbackText?.setText(feedback);
+      this.feedbackGuide?.setTexture(surplus <= 10 ? "guideThinking" : "guideHappy");
     }
   }
 }
