@@ -193,18 +193,18 @@ class BudgetSimulatorScene extends Phaser.Scene {
     this.clearScreen();
     this.drawBackground();
 
-    this.addText(64, 54, "Diseña el presupuesto del país", 54, "#17211f", 690, "bold");
-    this.addText(
+    const title = this.addText(64, 54, "Diseña el presupuesto del país", 46, "#17211f", 700, "bold");
+    const intro = this.addText(
       68,
-      138,
+      title.y + title.height + 32,
       "Imagina que eres responsable de decidir cómo se distribuye el presupuesto del país. Deberás asignar recursos a distintas áreas importantes como educación, salud, seguridad e infraestructura.",
       24,
       "#364340",
       700
     );
-    this.addText(
+    const reminder = this.addText(
       68,
-      246,
+      intro.y + intro.height + 28,
       "Pero recuerda: los recursos son limitados. Si decides gastar más en un área, habrá menos recursos para otras.",
       24,
       "#364340",
@@ -212,7 +212,7 @@ class BudgetSimulatorScene extends Phaser.Scene {
     );
     this.addText(
       68,
-      344,
+      reminder.y + reminder.height + 28,
       "Al final podrás comparar tu presupuesto con la forma en que realmente se distribuye el presupuesto del Estado.",
       24,
       "#364340",
@@ -297,7 +297,7 @@ class BudgetSimulatorScene extends Phaser.Scene {
       "Al aumentar recursos en algunas áreas, necesariamente quedan menos recursos disponibles para otras."
     );
 
-    this.drawIndicators(120, 168);
+    this.drawIndicators(56, 168);
     this.drawInfoPanel(152, 300, 876, 220, "Antes de comparar", [
       "En la siguiente pantalla podrás comparar tus decisiones con el presupuesto real del país.",
       "Observa dónde asignaste más recursos y dónde asignaste menos.",
@@ -589,16 +589,16 @@ class BudgetSimulatorScene extends Phaser.Scene {
       })
       .setOrigin(0.5);
 
-    container.add([rect, text]);
+    const hitArea = this.add
+      .rectangle(0, 0, width, height, 0xffffff, 0.001)
+      .setOrigin(0)
+      .setInteractive({ useHandCursor: true });
+
+    container.add([rect, text, hitArea]);
     container.setSize(width, height);
-    container.setInteractive({
-      hitArea: new Phaser.Geom.Rectangle(0, 0, width, height),
-      hitAreaCallback: Phaser.Geom.Rectangle.Contains,
-      useHandCursor: true
-    });
-    container.on("pointerover", () => rect.setFillStyle(variant === "primary" ? 0xffd96f : 0xf0f5ef));
-    container.on("pointerout", () => rect.setFillStyle(colors.fill));
-    container.on("pointerdown", onClick);
+    hitArea.on("pointerover", () => rect.setFillStyle(variant === "primary" ? 0xffd96f : 0xf0f5ef));
+    hitArea.on("pointerout", () => rect.setFillStyle(colors.fill));
+    hitArea.on("pointerdown", onClick);
     return container;
   }
 
